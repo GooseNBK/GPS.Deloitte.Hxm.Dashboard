@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\API\\API.csproj": {}
+    "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\API\\API.csproj": {
+    "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\API\\API.csproj",
+        "projectUniqueName": "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\API\\API.csproj",
+        "projectPath": "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\API\\API.csproj",
         "packagesPath": "C:\\Users\\gusta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\API\\obj\\",
+        "outputPath": "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -25,16 +25,14 @@
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Application\\Application.csproj"
+              "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Application\\Application.csproj": {
+                "projectPath": "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Application\\Application.csproj"
               }
             }
           }
@@ -49,6 +47,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -77,14 +83,14 @@
         }
       }
     },
-    "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Application\\Application.csproj": {
+    "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Application\\Application.csproj",
+        "projectUniqueName": "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Application\\Application.csproj",
+        "projectPath": "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\gusta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Application\\obj\\",
+        "outputPath": "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -106,11 +112,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Domain\\Domain.csproj"
+              "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Domain\\Domain.csproj": {
+                "projectPath": "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Persistence\\Persistence.csproj": {
-                "projectPath": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Persistence\\Persistence.csproj"
+              "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Persistence\\Persistence.csproj": {
+                "projectPath": "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -144,14 +150,14 @@
         }
       }
     },
-    "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Domain\\Domain.csproj": {
+    "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Domain\\Domain.csproj",
+        "projectUniqueName": "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Domain\\Domain.csproj",
+        "projectPath": "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\gusta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Domain\\obj\\",
+        "outputPath": "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -204,14 +210,14 @@
         }
       }
     },
-    "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Persistence\\Persistence.csproj": {
+    "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Persistence\\Persistence.csproj",
+        "projectPath": "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Persistence\\Persistence.csproj",
         "packagesPath": "C:\\Users\\gusta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Persistence\\obj\\",
+        "outputPath": "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -233,8 +239,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Domain\\Domain.csproj"
+              "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Domain\\Domain.csproj": {
+                "projectPath": "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Domain\\Domain.csproj"
               }
             }
           }
@@ -248,6 +254,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -1,20 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using API.Extensions;
-using API.Infraestructure.Photos;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Persistence;
 
@@ -43,7 +29,7 @@ namespace API
             });
             
             services.AddDbContext<DataContext>(options => {
-                options.UseSqlServer(_config.GetConnectionString("DefaultConnection"));
+                options.UseSqlite(_config.GetConnectionString("DefaultConnection"));
             });
 
             services.AddCors(opt => 
@@ -54,7 +40,7 @@ namespace API
                     policy.AllowAnyMethod();
                 });                
             });
-            services.AddIdentityServices(_config);
+            //services.AddIdentityServices(_config);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
