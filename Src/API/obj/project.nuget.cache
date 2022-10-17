@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Q9iz3KItGPqX6vuvdWR1dh8MEcd3XPzlSSyKBQShYnM+Kd1xsgadsT/jfWHrzPaKiZ/wjV3v0jpU8way6zAk5g==",
+  "dgSpecHash": "wRnq4X7MgCdmsL+sjF6g8llzT5E8udn7BC1T66PQxmnz124au1bSwz7DaZDcFxfj00GlAZ2fkGtMsPomKB6QhA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\api\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gusta\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\gusta\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.10\\microsoft.data.sqlite.core.6.0.10.nupkg.sha512",
