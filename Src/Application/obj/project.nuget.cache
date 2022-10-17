@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "UH1PEg0hbgj48xUQOqHC7CA4HjYnbPcCiQWKsvZg2HMpv7ocTZ0VK4p1UiHnP8v1vL4D9fjyjWEvDxxh3FxrjQ==",
+  "dgSpecHash": "boz2QxhuTH9FgOSXEOXw3PfFcUe1+fHTzXKO7gpiW3MjDHcgyCOrYYWd3R5jGF8+SNa/J0NGvFOldyg+bxbXmA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Application\\Application.csproj",
+  "projectFilePath": "c:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Application\\Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\gusta\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
+    "C:\\Users\\gusta\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\gusta\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\gusta\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.10\\microsoft.data.sqlite.core.6.0.10.nupkg.sha512",
     "C:\\Users\\gusta\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",
     "C:\\Users\\gusta\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.10\\microsoft.entityframeworkcore.abstractions.6.0.10.nupkg.sha512",
