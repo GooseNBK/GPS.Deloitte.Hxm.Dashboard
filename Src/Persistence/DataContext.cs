@@ -14,5 +14,7 @@ namespace Persistence
         }
 
         public DbSet<Settings> Settings { get; set; }
+        public DbSet<InterfaceSetup> InterfaceSetup { get; set; }
+        public DbSet<ParameterTemplate> ParameterTemplate { get; set; }
     }
 }
