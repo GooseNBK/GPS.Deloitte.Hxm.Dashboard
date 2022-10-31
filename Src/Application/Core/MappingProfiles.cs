@@ -12,6 +12,7 @@ namespace Application.Core
         protected MappingProfiles()
         {
             CreateMap<Settings, Settings>();
+            CreateMap<InterfaceSetup, InterfaceSetup>();
         }
     }
 }
