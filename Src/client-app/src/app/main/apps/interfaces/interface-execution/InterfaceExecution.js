@@ -9,6 +9,8 @@ import { Select, TextField, Typography, MenuItem } from '@mui/material';
 import { useState } from 'react';
 import Button from '@mui/material/Button';
 import SvgIcon from 'src/BaseTemplate/core/SvgIcon/SvgIcon';
+import { useDispatch } from "react-redux";
+import setInterfaceSetups from 'src/app/store/custom/actions/interfaceSetupActions';
 
 const Root = styled(PageSimple)(({ theme }) => ({
   '& .FusePageSimple-header': {
@@ -21,9 +23,20 @@ function InterfaceExecution(props) {
     const [tabValue, setTabValue] = useState(0);
     const [employeeCodes, setEmployeeCodes] = useState("");
     const [apiMethod, setApiMethod] = useState("GET");
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        async function fetchData(){
+            const result = await axios.get("api/InterfaceSetups");
+            dispatch(setInterfaceSetups(result.data));
+        }
+        fetchData();
+    }, [dispatch]);
+
+
     function handleTabChange(event, value) {
         setTabValue(value);
-      }
+    }
 
     function InputEmployeeCodes(e)
     {
@@ -34,6 +47,7 @@ function InterfaceExecution(props) {
         console.log(dataArray.join(","));
         setEmployeeCodes(dataArray.join(","));
     }
+    
   return (
     <Root header={<InterfaceExecutionHeader />} content={
         <div className="w-full p-12 pt-16 sm:pt-24 lg:ltr:pr-0 lg:rtl:pl-0">

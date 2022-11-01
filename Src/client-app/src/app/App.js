@@ -15,14 +15,19 @@ import Authorization from 'src/BaseTemplate/core/Authorization';
 import settingsConfig from 'app/configs/settingsConfig';
 import withAppProviders from './withAppProviders';
 import { AuthProvider } from './auth/AuthContext';
+import store from "./store/index";
+import * as _redux from "./store";
 
-// import axios from 'axios';
-/**
- * Axios HTTP Request defaults
- */
+import axios from 'axios';
+// /**
+//  * Axios HTTP Request defaults
+//  */
 // axios.defaults.baseURL = "";
 // axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 // axios.defaults.headers.common['Content-Type'] = 'application/x-www-form-urlencoded';
+
+var url = process.env.REACT_APP_API_URL;
+axios.defaults.baseURL = url;
 
 const emotionCacheOptions = {
   rtl: {
@@ -36,6 +41,8 @@ const emotionCacheOptions = {
     insertionPoint: document.getElementById('emotion-insertion-point'),
   },
 };
+
+//_redux.setupAxios(axios, store);
 
 const App = () => {
   const user = useSelector(selectUser);
