@@ -10,7 +10,6 @@ import { useState } from 'react';
 import Button from '@mui/material/Button';
 import SvgIcon from 'src/BaseTemplate/core/SvgIcon/SvgIcon';
 import { useDispatch } from "react-redux";
-import setInterfaceSetups from 'src/app/store/custom/actions/interfaceSetupActions';
 
 const Root = styled(PageSimple)(({ theme }) => ({
   '& .FusePageSimple-header': {
@@ -25,13 +24,13 @@ function InterfaceExecution(props) {
     const [apiMethod, setApiMethod] = useState("GET");
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        async function fetchData(){
-            const result = await axios.get("api/InterfaceSetups");
-            dispatch(setInterfaceSetups(result.data));
-        }
-        fetchData();
-    }, [dispatch]);
+    // useEffect(() => {
+    //     async function fetchData(){
+    //         const result = await axios.get("api/InterfaceSetups");
+    //         dispatch(setInterfaceSetups(result.data));
+    //     }
+    //     fetchData();
+    // }, [dispatch]);
 
 
     function handleTabChange(event, value) {

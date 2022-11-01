@@ -1,6 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
 import createReducer from './rootReducer';
-export {default as setupAxios} from "./setupAxios";
 
 if (process.env.NODE_ENV === 'development' && module.hot) {
   module.hot.accept('./rootReducer', () => {
