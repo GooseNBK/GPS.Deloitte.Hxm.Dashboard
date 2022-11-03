@@ -12,7 +12,7 @@ import SvgIcon from 'src/baseComponents/core/SvgIcon/SvgIcon';
 import { useDispatch, useSelector } from "react-redux";
 import withReducer from 'app/store/withReducer';
 import reducer from './store';
-import { getInterfaces, selectInterfaces } from './store/interfaceSlice';
+import { getInterfaces, setInterfaces } from './store/interfaceSlice';
 
 const Root = styled(PageSimple)(({ theme }) => ({
   '& .FusePageSimple-header': {
@@ -136,4 +136,4 @@ function InterfaceExecution(props) {
     );
 }
 
-export default withReducer('interfaceExecution', reducer)(InterfaceExecution);
+export default withReducer('interfaces', reducer)(InterfaceExecution);

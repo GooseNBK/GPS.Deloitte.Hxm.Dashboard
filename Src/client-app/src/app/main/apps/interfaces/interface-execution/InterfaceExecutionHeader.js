@@ -4,11 +4,11 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
 import { useSelector } from "react-redux";
-import { selectInterfaces } from './store/interfaceSlice';
+import { setInterfaces } from './store/interfaceSlice';
 
 function InterfaceExecutionHeader(props) {
     const [interfaceId, setInterfaceId] = useState("1");
-    let interfaces = useSelector(selectInterfaces);
+    let interfaces = useSelector(setInterfaces);
 
     const handleChange = (event) => {
         setInterfaceId(event.target.value);
