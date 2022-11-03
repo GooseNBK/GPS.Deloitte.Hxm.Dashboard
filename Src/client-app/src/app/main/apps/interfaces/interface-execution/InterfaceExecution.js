@@ -6,10 +6,13 @@ import InterfaceExecutionHeader from './InterfaceExecutionHeader';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import { Select, TextField, Typography, MenuItem } from '@mui/material';
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Button from '@mui/material/Button';
 import SvgIcon from 'src/BaseTemplate/core/SvgIcon/SvgIcon';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import withReducer from 'app/store/withReducer';
+import reducer from './store';
+import { getInterfaces, selectInterfaces } from './store/interfaceSlice';
 
 const Root = styled(PageSimple)(({ theme }) => ({
   '& .FusePageSimple-header': {
@@ -23,14 +26,12 @@ function InterfaceExecution(props) {
     const [employeeCodes, setEmployeeCodes] = useState("");
     const [apiMethod, setApiMethod] = useState("GET");
     const dispatch = useDispatch();
+    const interfaces = useSelector(selectInterfaces);
 
-    // useEffect(() => {
-    //     async function fetchData(){
-    //         const result = await axios.get("api/InterfaceSetups");
-    //         dispatch(setInterfaceSetups(result.data));
-    //     }
-    //     fetchData();
-    // }, [dispatch]);
+    useEffect(() => {
+        dispatch(getInterfaces());
+        console.log(interfaces);
+    }, [dispatch]);
 
 
     function handleTabChange(event, value) {
@@ -137,4 +138,4 @@ function InterfaceExecution(props) {
   );
 }
 
-export default InterfaceExecution;
+export default withReducer('interfaceExecution', reducer)(InterfaceExecution);

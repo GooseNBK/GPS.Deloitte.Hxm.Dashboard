@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Klvx27jkZbB+6MCatkGq6khp7LTuHG8Q9sMgTcU7WTgB5HHNs6IaJvlIwQ0POZ0iG/AzCJZE4ZI24rdXUYiK+A==",
+  "dgSpecHash": "+ruZQ3BUe2TEDmsQ7dtl/XmtoSs8rq6r/WMZwG8X1j+acjNsW7j/gmTdSG9Ej/dH+l2SlJGB69y4uWgN3nux/A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\src\\Persistence\\Persistence.csproj",
+  "projectFilePath": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gusta\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.10\\microsoft.data.sqlite.core.6.0.10.nupkg.sha512",
     "C:\\Users\\gusta\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",

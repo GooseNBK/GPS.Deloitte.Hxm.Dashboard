@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X6K4mmlfSwunsBv+N/4KCf22FlCB/KQUcUngMJ4P9LuznWEutxpTpVcG+4wmb6mgEdtPUxH+YfvoB0vYtTlI+w==",
+  "dgSpecHash": "ZVOFAj9m2VQKqqUnFY3UUldB51x2WSb2wP0DJ5Vf1Yamqvy3TIAWvsnhI1a2EKU0hu1C64kHZrucOYNoNqhLPA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\src\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

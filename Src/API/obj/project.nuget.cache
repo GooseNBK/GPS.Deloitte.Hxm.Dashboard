@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t3eqGaBeX8DuUS7A+Ll6v1g7WiKXPL9nfDqMYlTxmI+9xXzzfbn2RxBswyPoFxSKUW61aIgElSRT68xvaie87g==",
+  "dgSpecHash": "T75F6wHfVmFf/ZoIK436EThh5JQEPeqb4igTFZqdGTOB8EdSdStyqOgUUaaeQNszxw5woO+fWZhWHtDiRIsWrA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\src\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\gusta\\OneDrive\\Documents\\PersonalFiles\\Workbench\\Dev\\DotNetCore\\GPS.Deloitte.Hxm.Dashboard\\Src\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gusta\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\gusta\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
