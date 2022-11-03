@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { selectInterfaces } from './store/interfaceSlice';
 
 function InterfaceExecutionHeader(props) {
-    const [interfaceId, setInterfaceId] = useState("0");
+    const [interfaceId, setInterfaceId] = useState("1");
     let interfaces = useSelector(selectInterfaces);
 
     const handleChange = (event) => {
@@ -26,10 +26,9 @@ function InterfaceExecutionHeader(props) {
         </div>
         <div className="flex items-center mt-24 sm:mt-0 sm:mx-8 space-x-12">
             <Select value={interfaceId} onChange={handleChange} label="Interface">
-              <MenuItem value="0">Select</MenuItem>
               {
-                interfaces?.map(profile => (
-                  <MenuItem key={profile.id} value={"0"}>{profile.name}</MenuItem>
+                interfaces?.map(inter => (
+                  <MenuItem key={inter.id} value={inter.id}>{inter.name}</MenuItem>
                 ))
               }
             </Select>
