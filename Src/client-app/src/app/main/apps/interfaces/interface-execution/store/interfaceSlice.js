@@ -9,13 +9,13 @@ export const getInterfaces = createAsyncThunk('interfaceExecution/getInterfaces'
 
 const interfaceSlice = createSlice({
     name: 'interfaceExecution',
-    initialState: null,
+    initialState: [],
     reducers: {},
     extraReducers: {
         [getInterfaces.fulfilled]: (state, action) => action.payload,
     },
 });
 
-export const selectInterfaces = ({ interfaceExecution }) => interfaceExecution.intefaces; //view redux devtools
+export const selectInterfaces = ({ interfaceExecution }) => interfaceExecution.interfaces; //view redux devtools
 
 export default interfaceSlice.reducer;

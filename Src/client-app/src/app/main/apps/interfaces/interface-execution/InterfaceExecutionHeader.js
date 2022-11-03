@@ -8,9 +8,7 @@ import { selectInterfaces } from './store/interfaceSlice';
 
 function InterfaceExecutionHeader(props) {
     const [interfaceId, setInterfaceId] = useState("0");
-    //let interfaces = useSelector((interfaceExecution) => interfaceExecution.intefaces);
     let interfaces = useSelector(selectInterfaces);
-    console.log(interfaces);
 
     const handleChange = (event) => {
         setInterfaceId(event.target.value);

@@ -26,11 +26,9 @@ function InterfaceExecution(props) {
     const [employeeCodes, setEmployeeCodes] = useState("");
     const [apiMethod, setApiMethod] = useState("GET");
     const dispatch = useDispatch();
-
-    let interfaces = useSelector(selectInterfaces);
     useEffect(() => {
         dispatch(getInterfaces());
-    }, [selectInterfaces, dispatch]);
+    }, [dispatch]);
 
     async function fetchData(){
         
