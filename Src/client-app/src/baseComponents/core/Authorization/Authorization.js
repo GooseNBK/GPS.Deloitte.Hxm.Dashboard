@@ -1,8 +1,8 @@
-import FuseUtils from 'src/BaseTemplate/utils';
+import FuseUtils from 'src/baseComponents/utils';
 import AppContext from 'app/AppContext';
 import { Component } from 'react';
 import { matchRoutes } from 'react-router-dom';
-import withRouter from 'src/BaseTemplate/core/WithRouter';
+import withRouter from 'src/baseComponents/core/WithRouter';
 import history from '@history';
 
 let loginRedirectUrl = null;

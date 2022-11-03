@@ -1,5 +1,5 @@
-import PageCarded from 'src/BaseTemplate/core/CardedPage/PageCarded'
-import PageSimple from 'src/BaseTemplate/core/SimplePage/PageSimple'
+import PageCarded from 'src/baseComponents/core/CardedPage/PageCarded'
+import PageSimple from 'src/baseComponents/core/SimplePage/PageSimple'
 import _ from '@lodash';
 import { styled } from '@mui/material/styles';
 import InterfaceExecutionStatusHeader from './InterfaceExecutionStatusHeader';

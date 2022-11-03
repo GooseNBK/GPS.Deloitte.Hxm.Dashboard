@@ -2,7 +2,7 @@ import Badge from '@mui/material/Badge';
 import IconButton from '@mui/material/IconButton';
 import { useDispatch, useSelector } from 'react-redux';
 import withReducer from 'app/store/withReducer';
-import SvgIcon from 'src/BaseTemplate/core/SvgIcon';
+import SvgIcon from 'src/baseComponents/core/SvgIcon';
 import reducer from './store';
 import { selectNotifications } from './store/dataSlice';
 import { toggleNotificationPanel } from './store/stateSlice';

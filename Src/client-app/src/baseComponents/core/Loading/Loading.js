@@ -1,4 +1,4 @@
-import { useTimeout } from 'src/BaseTemplate/hooks';
+import { useTimeout } from 'src/baseComponents/hooks';
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 import { useState } from 'react';

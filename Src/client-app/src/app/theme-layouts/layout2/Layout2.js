@@ -1,6 +1,6 @@
-import Dialog from 'src/BaseTemplate/core/Dialog'
+import Dialog from 'src/baseComponents/core/Dialog'
 import { styled } from '@mui/material/styles';
-import Suspense from 'src/BaseTemplate/core/Suspense';
+import Suspense from 'src/baseComponents/core/Suspense';
 import AppContext from 'app/AppContext';
 import clsx from 'clsx';
 import { memo, useContext } from 'react';

@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import { useSelector } from 'react-redux';
 import _ from '@lodash';
 import Button from '@mui/material/Button';
-import SvgIcon from 'src/BaseTemplate/core/SvgIcon';
+import SvgIcon from 'src/baseComponents/core/SvgIcon';
 import { selectUser } from 'app/store/userSlice';
 
 function InterfaceDashboardAppHeader(props) {

@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Typography';
 import _ from '@lodash';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
 import { useSelector } from "react-redux";

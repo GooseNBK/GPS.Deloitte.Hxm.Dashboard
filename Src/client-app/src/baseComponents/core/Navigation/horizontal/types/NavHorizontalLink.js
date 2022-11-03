@@ -4,9 +4,9 @@ import ListItemText from '@mui/material/ListItemText';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { memo, useMemo } from 'react';
-import withRouter from 'src/BaseTemplate/core/WithRouter';
+import withRouter from 'src/baseComponents/core/WithRouter';
 import NavBadge from '../../NavBadge';
-import SvgIcon from 'src/BaseTemplate/core/SvgIcon';
+import SvgIcon from 'src/baseComponents/core/SvgIcon';
 
 const StyledListItem = styled(ListItem)(({ theme }) => ({
   color: theme.palette.text.primary,

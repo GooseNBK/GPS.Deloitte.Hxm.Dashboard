@@ -1,6 +1,6 @@
-import NavLinkAdapter from 'src/BaseTemplate/core/NavLinkAdapter';
+import NavLinkAdapter from 'src/baseComponents/core/NavLinkAdapter';
 import { styled, useTheme } from '@mui/material/styles';
-import { useDebounce } from 'src/BaseTemplate/hooks';
+import { useDebounce } from 'src/baseComponents/hooks';
 import Grow from '@mui/material/Grow';
 import IconButton from '@mui/material/IconButton';
 import ListItem from '@mui/material/ListItem';
@@ -11,10 +11,10 @@ import PropTypes from 'prop-types';
 import { memo, useMemo, useState } from 'react';
 import * as ReactDOM from 'react-dom';
 import { Manager, Popper, Reference } from 'react-popper';
-import withRouter from 'src/BaseTemplate/core/WithRouter';
-import NavBadge from 'src/BaseTemplate/core/Navigation/NavBadge';
-import NavItem from 'src/BaseTemplate/core/Navigation/NavItem';
-import SvgIcon from 'src/BaseTemplate/core/SvgIcon';
+import withRouter from 'src/baseComponents/core/WithRouter';
+import NavBadge from 'src/baseComponents/core/Navigation/NavBadge';
+import NavItem from 'src/baseComponents/core/Navigation/NavItem';
+import SvgIcon from 'src/baseComponents/core/SvgIcon';
 
 const StyledListItem = styled(ListItem)(({ theme }) => ({
   color: theme.palette.text.primary,

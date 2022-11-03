@@ -1,5 +1,5 @@
-import PageSimple from 'src/BaseTemplate/core/SimplePage/PageSimple';
-import PageCarded from 'src/BaseTemplate/core/CardedPage/PageCarded';
+import PageSimple from 'src/baseComponents/core/SimplePage/PageSimple';
+import PageCarded from 'src/baseComponents/core/CardedPage/PageCarded';
 import _ from '@lodash';
 import { styled } from '@mui/material/styles';
 import InterfaceExecutionHeader from './InterfaceExecutionHeader';
@@ -8,7 +8,7 @@ import Tabs from '@mui/material/Tabs';
 import { Select, TextField, Typography, MenuItem } from '@mui/material';
 import { useEffect, useMemo, useState } from 'react';
 import Button from '@mui/material/Button';
-import SvgIcon from 'src/BaseTemplate/core/SvgIcon/SvgIcon';
+import SvgIcon from 'src/baseComponents/core/SvgIcon/SvgIcon';
 import { useDispatch, useSelector } from "react-redux";
 import withReducer from 'app/store/withReducer';
 import reducer from './store';

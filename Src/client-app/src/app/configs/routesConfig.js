@@ -1,5 +1,5 @@
-import FuseUtils from 'src/BaseTemplate/utils';
-import Loading from 'src/BaseTemplate/core/Loading';
+import FuseUtils from 'src/baseComponents/utils';
+import Loading from 'src/baseComponents/core/Loading';
 import { Navigate } from 'react-router-dom';
 import settingsConfig from 'app/configs/settingsConfig';
 import SignInConfig from '../main/sign-in/SignInConfig';

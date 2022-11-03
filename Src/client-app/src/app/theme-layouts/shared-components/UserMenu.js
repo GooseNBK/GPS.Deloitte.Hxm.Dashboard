@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
-import SvgIcon from 'src/BaseTemplate/core/SvgIcon';
+import SvgIcon from 'src/baseComponents/core/SvgIcon';
 import { selectUser } from 'app/store/userSlice';
 
 function UserMenu(props) {

@@ -1,4 +1,4 @@
-import Loading from 'src/BaseTemplate/core/Loading';
+import Loading from 'src/baseComponents/core/Loading';
 import PropTypes from 'prop-types';
 import { Suspense } from 'react';
 

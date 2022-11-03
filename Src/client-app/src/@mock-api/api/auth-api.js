@@ -1,4 +1,4 @@
-import FuseUtils from 'src/BaseTemplate/utils';
+import FuseUtils from 'src/baseComponents/utils';
 import _ from '@lodash';
 import Base64 from 'crypto-js/enc-base64';
 import HmacSHA256 from 'crypto-js/hmac-sha256';

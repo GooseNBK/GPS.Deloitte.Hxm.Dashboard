@@ -1,4 +1,4 @@
-import Scrollbars from 'src/BaseTemplate/core/Scrollbars/Scrollbars';
+import Scrollbars from 'src/baseComponents/core/Scrollbars/Scrollbars';
 import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
@@ -8,7 +8,7 @@ import { useSnackbar } from 'notistack';
 import { memo, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-import SvgIcon from 'src/BaseTemplate/core/SvgIcon';
+import SvgIcon from 'src/baseComponents/core/SvgIcon';
 import Button from '@mui/material/Button';
 import NotificationTemplate from 'app/theme-layouts/shared-components/notificationPanel/NotificationTemplate';
 import NotificationModel from './model/NotificationModel';

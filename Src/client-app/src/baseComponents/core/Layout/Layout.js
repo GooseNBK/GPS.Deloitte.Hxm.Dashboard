@@ -1,4 +1,4 @@
-import { useDeepCompareEffect } from 'src/BaseTemplate/hooks';
+import { useDeepCompareEffect } from 'src/baseComponents/hooks';
 import _ from '@lodash';
 import AppContext from 'app/AppContext';
 import {

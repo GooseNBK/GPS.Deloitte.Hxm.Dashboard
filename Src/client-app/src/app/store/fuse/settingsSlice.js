@@ -7,7 +7,7 @@ import {
   extendThemeWithMixins,
   getParsedQuerySettings,
   mustHaveThemeOptions,
-} from 'src/BaseTemplate/default-settings';
+} from 'src/baseComponents/default-settings';
 import settingsConfig from 'app/configs/settingsConfig';
 import themeLayoutConfigs from 'app/theme-layouts/themeLayoutConfigs';
 import { setUser, updateUserSettings } from 'app/store/userSlice';

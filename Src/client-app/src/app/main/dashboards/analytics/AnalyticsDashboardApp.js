@@ -2,7 +2,7 @@ import withReducer from 'app/store/withReducer';
 import { useEffect, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import _ from '@lodash';
-import PageSimple from 'src/BaseTemplate/core/SimplePage/PageSimple';
+import PageSimple from 'src/baseComponents/core/SimplePage/PageSimple';
 import { motion } from 'framer-motion';
 import reducer from './store';
 import { getWidgets, selectWidgets } from './store/widgetsSlice';

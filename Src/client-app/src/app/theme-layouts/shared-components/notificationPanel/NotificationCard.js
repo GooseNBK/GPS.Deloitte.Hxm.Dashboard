@@ -3,8 +3,8 @@ import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import clsx from 'clsx';
-import SvgIcon from 'src/BaseTemplate/core/SvgIcon';
-import NavLinkAdapter from 'src/BaseTemplate/core/NavLinkAdapter';
+import SvgIcon from 'src/baseComponents/core/SvgIcon';
+import NavLinkAdapter from 'src/baseComponents/core/NavLinkAdapter';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 
 function NotificationCard(props) {

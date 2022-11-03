@@ -1,5 +1,5 @@
 import _ from '@lodash';
-import FuseUtils from 'src/BaseTemplate/utils';
+import FuseUtils from 'src/baseComponents/utils';
 import mockApi from '../mock-api.json';
 import mock from '../mock';
 

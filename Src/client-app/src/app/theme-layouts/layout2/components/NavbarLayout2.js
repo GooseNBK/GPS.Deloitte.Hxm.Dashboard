@@ -1,4 +1,4 @@
-import Scrollbars from 'src/BaseTemplate/core/Scrollbars/Scrollbars';
+import Scrollbars from 'src/baseComponents/core/Scrollbars/Scrollbars';
 import { styled } from '@mui/material/styles';
 import clsx from 'clsx';
 import { memo } from 'react';

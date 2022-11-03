@@ -1,4 +1,4 @@
-import FuseUtils from 'src/BaseTemplate/utils';
+import FuseUtils from 'src/baseComponents/utils';
 import _ from '@lodash';
 import mockApi from '../mock-api.json';
 import mock from '../mock';

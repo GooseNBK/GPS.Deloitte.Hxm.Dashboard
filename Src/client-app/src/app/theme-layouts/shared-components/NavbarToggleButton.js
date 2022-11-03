@@ -2,9 +2,9 @@ import IconButton from '@mui/material/IconButton';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectFuseCurrentSettings, setDefaultSettings } from 'app/store/fuse/settingsSlice';
 import _ from '@lodash';
-import useThemeMediaQuery from 'src/BaseTemplate/hooks/useThemeMediaQuery';
+import useThemeMediaQuery from 'src/baseComponents/hooks/useThemeMediaQuery';
 import { navbarToggle, navbarToggleMobile } from 'app/store/fuse/navbarSlice';
-import SvgIcon from 'src/BaseTemplate/core/SvgIcon';
+import SvgIcon from 'src/baseComponents/core/SvgIcon';
 
 function NavbarToggleButton(props) {
   const dispatch = useDispatch();

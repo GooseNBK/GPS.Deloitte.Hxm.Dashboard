@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import Splashscreen from 'src/BaseTemplate/core/Splashscreen/Splashscreen'
+import Splashscreen from 'src/baseComponents/core/Splashscreen/Splashscreen'
 import { showMessage } from 'app/store/fuse/messageSlice';
 import { logoutUser, setUser } from 'app/store/userSlice';
 import jwtService from './services/jwtService';

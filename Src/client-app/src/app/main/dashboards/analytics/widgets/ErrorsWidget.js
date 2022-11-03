@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import Paper from '@mui/material/Paper';
 import Chip from '@mui/material/Chip';
 import Typography from '@mui/material/Typography';
-import SvgIcon from 'src/BaseTemplate/core/SvgIcon';
+import SvgIcon from 'src/baseComponents/core/SvgIcon';
 import { selectWidgets } from '../store/widgetsSlice';
 
 function ErrorsWidget(props) {

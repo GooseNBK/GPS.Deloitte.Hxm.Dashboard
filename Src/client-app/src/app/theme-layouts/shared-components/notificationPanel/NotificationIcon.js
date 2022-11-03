@@ -1,4 +1,4 @@
-import SvgIcon from 'src/BaseTemplate/core/SvgIcon';
+import SvgIcon from 'src/baseComponents/core/SvgIcon';
 
 const NotificationIcon = ({ value }) => {
   switch (value) {

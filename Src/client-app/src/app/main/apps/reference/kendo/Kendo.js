@@ -9,7 +9,7 @@ import {
 import { filterBy } from "@progress/kendo-data-query";
 import { Grid, GridColumn } from "@progress/kendo-react-grid";
 import products from "./products.json";
-import Scrollbars from "src/BaseTemplate/core/Scrollbars/Scrollbars";
+import Scrollbars from "src/baseComponents/core/Scrollbars/Scrollbars";
 
 
 export default function Kendo() {

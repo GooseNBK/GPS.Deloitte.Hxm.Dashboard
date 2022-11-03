@@ -1,4 +1,4 @@
-import PageSimple from 'src/BaseTemplate/core/SimplePage/PageSimple';
+import PageSimple from 'src/baseComponents/core/SimplePage/PageSimple';
 import _ from '@lodash';
 import { styled } from '@mui/material/styles';
 import InterfaceDashboardAppHeader from './InterfaceDashboardAppHeader';

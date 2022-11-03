@@ -1,5 +1,5 @@
 import _ from '@lodash';
-import FuseUtils from 'src/BaseTemplate/utils';
+import FuseUtils from 'src/baseComponents/utils';
 
 function NotificationModel(data) {
   data = data || {};

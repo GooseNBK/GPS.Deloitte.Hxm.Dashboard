@@ -1,4 +1,4 @@
-import FuseUtils from 'src/BaseTemplate/utils/FuseUtils';
+import FuseUtils from 'src/baseComponents/utils/FuseUtils';
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import jwtServiceConfig from './jwtServiceConfig';

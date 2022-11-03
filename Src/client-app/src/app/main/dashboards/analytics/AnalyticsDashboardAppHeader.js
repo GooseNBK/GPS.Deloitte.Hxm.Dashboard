@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import SvgIcon from 'src/BaseTemplate/core/SvgIcon';
+import SvgIcon from 'src/baseComponents/core/SvgIcon';
 
 function AnalyticsDashboardAppHeader(props) {
   return (

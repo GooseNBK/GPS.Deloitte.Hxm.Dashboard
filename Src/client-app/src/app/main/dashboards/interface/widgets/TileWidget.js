@@ -1,5 +1,5 @@
 import { Box } from '@mui/system';
-import SvgIcon from 'src/BaseTemplate/core/SvgIcon';
+import SvgIcon from 'src/baseComponents/core/SvgIcon';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';

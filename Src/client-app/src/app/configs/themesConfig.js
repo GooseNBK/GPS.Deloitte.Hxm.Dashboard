@@ -1,4 +1,4 @@
-import {dark, blue} from 'src/BaseTemplate/colors';
+import {dark, blue} from 'src/baseComponents/colors';
 import { blueGrey } from '@mui/material/colors';
 
 export const lightPaletteText = {

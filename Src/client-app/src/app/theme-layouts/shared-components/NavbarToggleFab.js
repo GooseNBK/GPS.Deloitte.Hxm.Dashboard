@@ -5,8 +5,8 @@ import Tooltip from '@mui/material/Tooltip';
 import { navbarToggle, navbarToggleMobile } from 'app/store/fuse/navbarSlice';
 import clsx from 'clsx';
 import { useDispatch, useSelector } from 'react-redux';
-import useThemeMediaQuery from 'src/BaseTemplate/hooks/useThemeMediaQuery';
-import SvgIcon from 'src/BaseTemplate/core/SvgIcon';
+import useThemeMediaQuery from 'src/baseComponents/hooks/useThemeMediaQuery';
+import SvgIcon from 'src/baseComponents/core/SvgIcon';
 import { selectFuseCurrentLayoutConfig } from 'app/store/fuse/settingsSlice';
 
 const Root = styled(Tooltip)(({ theme, position }) => ({

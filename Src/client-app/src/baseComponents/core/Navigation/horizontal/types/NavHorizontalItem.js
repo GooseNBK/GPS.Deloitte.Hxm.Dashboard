@@ -1,13 +1,13 @@
-import NavLinkAdapter from 'src/BaseTemplate/core/NavLinkAdapter';
+import NavLinkAdapter from 'src/baseComponents/core/NavLinkAdapter';
 import { styled } from '@mui/material/styles';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { memo, useMemo } from 'react';
-import withRouter from 'src/BaseTemplate/core/WithRouter';
+import withRouter from 'src/baseComponents/core/WithRouter';
 import FuseNavBadge from '../../NavBadge';
-import SvgIcon from 'src/BaseTemplate/core/SvgIcon';
+import SvgIcon from 'src/baseComponents/core/SvgIcon';
 
 const StyledListItem = styled(ListItem)(({ theme }) => ({
   color: theme.palette.text.primary,

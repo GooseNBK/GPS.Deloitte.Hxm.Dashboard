@@ -1,6 +1,6 @@
 import { createEntityAdapter, createSelector, createSlice } from '@reduxjs/toolkit';
 import navigationConfig from 'app/configs/navigationConfig';
-import FuseUtils from 'src/BaseTemplate/utils';
+import FuseUtils from 'src/baseComponents/utils';
 import i18next from 'i18next';
 import _ from '@lodash';
 
