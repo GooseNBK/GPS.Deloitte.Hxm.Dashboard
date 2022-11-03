@@ -26,13 +26,15 @@ function InterfaceExecution(props) {
     const [employeeCodes, setEmployeeCodes] = useState("");
     const [apiMethod, setApiMethod] = useState("GET");
     const dispatch = useDispatch();
-    const interfaces = useSelector(selectInterfaces);
 
+    let interfaces = useSelector(selectInterfaces);
     useEffect(() => {
         dispatch(getInterfaces());
-        console.log(interfaces);
-    }, [dispatch]);
+    }, [selectInterfaces, dispatch]);
 
+    async function fetchData(){
+        
+    }
 
     function handleTabChange(event, value) {
         setTabValue(value);
@@ -43,8 +45,6 @@ function InterfaceExecution(props) {
         e.preventDefault();
         var content = e.target.value;
         var dataArray = content.split("\n");
-        console.log(dataArray);
-        console.log(dataArray.join(","));
         setEmployeeCodes(dataArray.join(","));
     }
     

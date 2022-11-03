@@ -3,10 +3,7 @@ import axios from 'axios';
 
 export const getInterfaces = createAsyncThunk('interfaceExecution/getInterfaces', async () => {
     const response = await axios.get('/api/InterfaceSetups');
-
     const data = await response.data;
-    console.log(data);
-
     return data;
 });
 
@@ -19,6 +16,6 @@ const interfaceSlice = createSlice({
     },
 });
 
-export const selectInterfaces = ({ interfaceExecution }) => interfaceExecution;
+export const selectInterfaces = ({ interfaceExecution }) => interfaceExecution.intefaces; //view redux devtools
 
 export default interfaceSlice.reducer;

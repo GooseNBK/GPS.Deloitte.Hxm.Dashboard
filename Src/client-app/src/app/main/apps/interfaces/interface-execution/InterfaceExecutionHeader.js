@@ -3,11 +3,16 @@ import _ from '@lodash';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
+import { useSelector } from "react-redux";
+import { selectInterfaces } from './store/interfaceSlice';
 
 function InterfaceExecutionHeader(props) {
-    const [interfaceId, setInterfaceId] = useState("odsf");
+    const [interfaceId, setInterfaceId] = useState("0");
+    //let interfaces = useSelector((interfaceExecution) => interfaceExecution.intefaces);
+    let interfaces = useSelector(selectInterfaces);
+    console.log(interfaces);
 
-    const handleChange = (event: SelectChangeEvent) => {
+    const handleChange = (event) => {
         setInterfaceId(event.target.value);
     };
 
@@ -23,9 +28,12 @@ function InterfaceExecutionHeader(props) {
         </div>
         <div className="flex items-center mt-24 sm:mt-0 sm:mx-8 space-x-12">
             <Select value={interfaceId} onChange={handleChange} label="Interface">
-                <MenuItem value={"odsf"}>On Demand SF</MenuItem>
-                <MenuItem value={"odcp"}>On Demand CP</MenuItem>
-                <MenuItem value={"onsk"}>On Demand Skip </MenuItem>
+              <MenuItem value="0">Select</MenuItem>
+              {
+                interfaces?.map(profile => (
+                  <MenuItem key={profile.id} value={"0"}>{profile.name}</MenuItem>
+                ))
+              }
             </Select>
         </div>
       </div>
