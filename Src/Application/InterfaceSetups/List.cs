@@ -23,7 +23,8 @@ namespace Application.InterfaceSetups
 
             public async Task<List<InterfaceSetup>> Handle(Query request, CancellationToken cancellationToken)
             {
-                return await _context.InterfaceSetup.ToListAsync();
+                var interfaces = await _context.InterfaceSetup.ToListAsync();
+                return interfaces;
             }
         }
     }
