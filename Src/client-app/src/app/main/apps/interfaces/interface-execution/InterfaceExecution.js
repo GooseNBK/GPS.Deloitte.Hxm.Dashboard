@@ -134,7 +134,7 @@ function InterfaceExecution(props) {
                                                 <Typography className="font-semibold text-16 mx-8">Endpoint</Typography>
                                             </div>
                                             <div className="flex flex-col md:flex-row justify-center md:items-end my-24 xs:flex-col md:space-x-24">
-                                                <Select className="mt-8 mb-16" value={selectedInterface?.method} label="Methods">
+                                                <Select disabled className="mt-8 mb-16" value={selectedInterface?.method} label="Methods">
                                                     <MenuItem value={"GET"}>GET</MenuItem>
                                                     <MenuItem value={"HEAD"}>HEAD</MenuItem>
                                                     <MenuItem value={"POST"}>POST</MenuItem>
