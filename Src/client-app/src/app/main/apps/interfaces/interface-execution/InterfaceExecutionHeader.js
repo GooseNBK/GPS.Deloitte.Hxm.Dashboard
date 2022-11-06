@@ -10,7 +10,7 @@ import { getInterfaceById } from './store/interfaceSlice';
 
 function InterfaceExecutionHeader(props) {   
     const dispatch = useDispatch();
-    const interfaces = useSelector((store) => store.interfaceSetups.interfaceSetups);
+    const interfaces = useSelector((store) => store.interfaces);
     const [interfaceId, setInterfaceId] = useState("0");
 
     const handleChange = (event) => {
@@ -43,4 +43,4 @@ function InterfaceExecutionHeader(props) {
   );
 }
 
-export default withReducer('interfaceSetup', reducer)(InterfaceExecutionHeader);
+export default InterfaceExecutionHeader;

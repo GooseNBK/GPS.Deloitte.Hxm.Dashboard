@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === 'development') {
   middlewares.push(logger);
 }
 
-const store = configureStore({
+const store = configureStore({  
   reducer: createReducer(),
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

@@ -136,4 +136,4 @@ function InterfaceExecution(props) {
     );
 }
 
-export default withReducer('interfaceSetups', reducer)(InterfaceExecution);
+export default InterfaceExecution;
