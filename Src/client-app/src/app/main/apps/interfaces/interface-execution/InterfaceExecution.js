@@ -30,11 +30,11 @@ function InterfaceExecution(props) {
     const [apiMethod, setApiMethod] = useState("GET");
     const [severity, setSeverity] = useState("success");
     const [alertMessage, setAlertMessage] = useState("This is a success message!");
+    const [openBackdrop, setOpenBackdrop] = useState(false);
+    const [openSnackbar, setOpenSnackbar] = useState(false);
+
     const dispatch = useDispatch();
     const selectedInterface = useSelector((store) => store.interface);
-    console.log("selectedInterface");
-    console.log(selectedInterface);
-    console.log(Object.keys(selectedInterface).length);
 
     useEffect(() => {
         dispatch(getInterfaces());
@@ -50,10 +50,7 @@ function InterfaceExecution(props) {
         var content = e.target.value;
         var dataArray = content.split("\n");
         setEmployeeCodes(dataArray.join(","));
-    }
-
-    const [openBackdrop, setOpenBackdrop] = useState(false);
-    const [openSnackbar, setOpenSnackbar] = useState(false);
+    }    
 
     const handleCloseBackdrop = () => {
         setOpenBackdrop(false);
@@ -71,6 +68,8 @@ function InterfaceExecution(props) {
         {
             setEmployeeCodes("");
             setOpenBackdrop(true);
+            setSeverity("success");
+            setAlertMessage("Interface execution completed!");
             setOpenSnackbar(true);
         }
         else
