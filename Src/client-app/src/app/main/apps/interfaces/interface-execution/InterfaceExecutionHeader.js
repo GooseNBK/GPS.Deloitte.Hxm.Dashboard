@@ -3,15 +3,19 @@ import _ from '@lodash';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
-import { useSelector } from "react-redux";
-import { setInterfaces } from './store/interfaceSlice';
+import { useDispatch, useSelector } from "react-redux";
+import withReducer from 'app/store/withReducer';
+import reducer from './store';
+import { getInterfaceById } from './store/interfaceSlice';
 
-function InterfaceExecutionHeader(props) {
-    const [interfaceId, setInterfaceId] = useState("1");
-    let interfaces = useSelector(setInterfaces);
+function InterfaceExecutionHeader(props) {   
+    const dispatch = useDispatch();
+    const interfaces = useSelector((store) => store.interfaceSetups.interfaceSetups);
+    const [interfaceId, setInterfaceId] = useState("0");
 
     const handleChange = (event) => {
         setInterfaceId(event.target.value);
+        dispatch(getInterfaceById(event.target.value));
     };
 
   return (
@@ -26,6 +30,7 @@ function InterfaceExecutionHeader(props) {
         </div>
         <div className="flex items-center mt-24 sm:mt-0 sm:mx-8 space-x-12">
             <Select value={interfaceId} onChange={handleChange} label="Interface">
+              <MenuItem disabled key="0" value="0">Choose Interface</MenuItem>
               {
                 interfaces?.map(inter => (
                   <MenuItem key={inter.id} value={inter.id}>{inter.name}</MenuItem>
@@ -38,4 +43,4 @@ function InterfaceExecutionHeader(props) {
   );
 }
 
-export default InterfaceExecutionHeader;
+export default withReducer('interfaceSetup', reducer)(InterfaceExecutionHeader);

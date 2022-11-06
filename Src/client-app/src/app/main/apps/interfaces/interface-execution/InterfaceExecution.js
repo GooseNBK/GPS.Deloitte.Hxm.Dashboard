@@ -12,7 +12,7 @@ import SvgIcon from 'src/baseComponents/core/SvgIcon/SvgIcon';
 import { useDispatch, useSelector } from "react-redux";
 import withReducer from 'app/store/withReducer';
 import reducer from './store';
-import { getInterfaces, setInterfaces } from './store/interfaceSlice';
+import { getInterfaces } from './store/interfacesSlice';
 
 const Root = styled(PageSimple)(({ theme }) => ({
   '& .FusePageSimple-header': {
@@ -26,13 +26,10 @@ function InterfaceExecution(props) {
     const [employeeCodes, setEmployeeCodes] = useState("");
     const [apiMethod, setApiMethod] = useState("GET");
     const dispatch = useDispatch();
+
     useEffect(() => {
         dispatch(getInterfaces());
     }, [dispatch]);
-
-    async function fetchData(){
-        
-    }
 
     function handleTabChange(event, value) {
         setTabValue(value);
@@ -53,6 +50,9 @@ function InterfaceExecution(props) {
                     <PageCarded
                         content={
                         <>
+                            {/* {
+                                parameterTemplateId
+                            } */}
                             <Tabs
                                 value={tabValue}
                                 onChange={handleTabChange}
@@ -136,4 +136,4 @@ function InterfaceExecution(props) {
     );
 }
 
-export default withReducer('interfaces', reducer)(InterfaceExecution);
+export default withReducer('interfaceSetups', reducer)(InterfaceExecution);

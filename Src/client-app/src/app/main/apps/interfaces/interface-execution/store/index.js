@@ -1,8 +1,10 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import interfaces from './interfaceSlice';
+import interfaceSetup from './interfaceSlice';
+import interfaceSetups from './interfacesSlice';
 
 const reducer = combineReducers({
-    interfaces,
+    interfaceSetups,
+    interfaceSetup,
 });
 
 export default reducer;
