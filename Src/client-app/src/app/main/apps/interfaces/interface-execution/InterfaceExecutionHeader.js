@@ -4,8 +4,6 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import withReducer from 'app/store/withReducer';
-import reducer from './store';
 import { getInterfaceById } from './store/interfaceSlice';
 
 function InterfaceExecutionHeader(props) {   
