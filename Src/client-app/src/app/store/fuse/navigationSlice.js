@@ -36,7 +36,7 @@ export const {
   selectAll: selectNavigationAll,
   selectIds: selectNavigationIds,
   selectById: selectNavigationItemById,
-} = navigationAdapter.getSelectors((state) => state.fuse.navigation);
+} = navigationAdapter.getSelectors((state) => state.dash.navigation);
 
 const navigationSlice = createSlice({
   name: 'navigation',

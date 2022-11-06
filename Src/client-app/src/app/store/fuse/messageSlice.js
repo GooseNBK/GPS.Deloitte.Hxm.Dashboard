@@ -31,8 +31,8 @@ const messageSlice = createSlice({
 
 export const { hideMessage, showMessage } = messageSlice.actions;
 
-export const selectFuseMessageState = ({ fuse }) => fuse.message.state;
+export const selectFuseMessageState = ({ dash }) => dash.message.state;
 
-export const selectFuseMessageOptions = ({ fuse }) => fuse.message.options;
+export const selectFuseMessageOptions = ({ dash }) => dash.message.options;
 
 export default messageSlice.reducer;

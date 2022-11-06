@@ -150,9 +150,9 @@ const Scrollbars = forwardRef((props, ref) => {
   );
 });
 
-function mapStateToProps({ fuse }) {
+function mapStateToProps({ dash }) {
   return {
-    customScrollbars: fuse.settings.current.customScrollbars,
+    customScrollbars: dash.settings.current.customScrollbars,
   };
 }
 

@@ -3,7 +3,7 @@ import i18n from 'src/i18n';
 import { setDefaultSettings } from './fuse/settingsSlice';
 
 export const changeLanguage = (languageId) => (dispatch, getState) => {
-  const { direction } = getState().fuse.settings.defaults;
+  const { direction } = getState().dash.settings.defaults;
 
   const newLangDirection = i18n.dir(languageId);
 

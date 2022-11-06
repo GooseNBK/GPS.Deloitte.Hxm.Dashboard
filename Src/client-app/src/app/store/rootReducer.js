@@ -1,5 +1,5 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import fuse from './fuse';
+import dash from './fuse';
 import i18n from './i18nSlice';
 import user from './userSlice';
 import interfaceReducer from 'src/app/main/apps/interfaces/interface-execution/store/interfaceSlice';
@@ -7,7 +7,7 @@ import interfacesReducer from 'src/app/main/apps/interfaces/interface-execution/
 
 const createReducer = (asyncReducers) => (state, action) => {
   const combinedReducer = combineReducers({
-    fuse,
+    dash,
     i18n,
     user,
     interface: interfaceReducer,

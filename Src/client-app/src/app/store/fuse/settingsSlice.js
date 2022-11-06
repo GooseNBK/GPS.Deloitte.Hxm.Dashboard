@@ -113,11 +113,11 @@ const settingsSlice = createSlice({
   },
 });
 
-const getDirection = (state) => state.fuse.settings.current.direction;
-const getMainTheme = (state) => state.fuse.settings.current.theme.main;
-const getNavbarTheme = (state) => state.fuse.settings.current.theme.navbar;
-const getToolbarTheme = (state) => state.fuse.settings.current.theme.toolbar;
-const getFooterTheme = (state) => state.fuse.settings.current.theme.footer;
+const getDirection = (state) => state.dash.settings.current.direction;
+const getMainTheme = (state) => state.dash.settings.current.theme.main;
+const getNavbarTheme = (state) => state.dash.settings.current.theme.navbar;
+const getToolbarTheme = (state) => state.dash.settings.current.theme.toolbar;
+const getFooterTheme = (state) => state.dash.settings.current.theme.footer;
 
 function generateMuiTheme(theme, direction) {
   const data = _.merge({}, defaultThemeOptions, theme, mustHaveThemeOptions);
@@ -226,13 +226,13 @@ export const selectFooterThemeLight = createSelector(
   (theme, direction) => generateMuiTheme(changeThemeMode(theme, 'light'), direction)
 );
 
-export const selectFuseCurrentSettings = ({ fuse }) => fuse.settings.current;
+export const selectFuseCurrentSettings = ({ dash }) => dash.settings.current;
 
-export const selectFuseCurrentLayoutConfig = ({ fuse }) => fuse.settings.current.layout.config;
+export const selectFuseCurrentLayoutConfig = ({ dash }) => dash.settings.current.layout.config;
 
-export const selectFuseDefaultSettings = ({ fuse }) => fuse.settings.defaults;
+export const selectFuseDefaultSettings = ({ dash }) => dash.settings.defaults;
 
-export const selectFuseThemesSettings = ({ fuse }) => fuse.settings.themes;
+export const selectFuseThemesSettings = ({ dash }) => dash.settings.themes;
 
 export const { resetSettings, setInitialSettings, setSettings } = settingsSlice.actions;
 
