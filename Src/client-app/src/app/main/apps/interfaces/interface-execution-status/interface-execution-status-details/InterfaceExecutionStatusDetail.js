@@ -22,7 +22,7 @@ function InterfaceExecutionStatusDetail(props) {
 
   useEffect(() => {
     return () => {
-        dispatch(getInterfaceExecutionById(processExecutionId));
+        //dispatch(getInterfaceExecutionById(processExecutionId));
     };
   }, [dispatch]);
 
