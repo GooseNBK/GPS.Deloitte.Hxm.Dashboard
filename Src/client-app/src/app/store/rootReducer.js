@@ -7,6 +7,7 @@ import interfacesReducer from 'src/app/main/apps/interfaces/interface-execution/
 import interfaceExecutionReducer from 'src/app/main/apps/interfaces/interface-execution-status/store/interfaceExecutionSlice';
 import interfaceExecutionsReducer from 'src/app/main/apps/interfaces/interface-execution-status/store/interfaceExecutionsSlice';
 import interfaceExecutionDetailsReducer from 'src/app/main/apps/interfaces/interface-execution-status/store/interfaceExecutionDetailsSlice';
+import interfaceExecutionDetailErrorsReducer from 'src/app/main/apps/interfaces/interface-execution-status/store/interfaceExecutionDetailErrorsSlice';
 
 const createReducer = (asyncReducers) => (state, action) => {
   const combinedReducer = combineReducers({
@@ -17,7 +18,8 @@ const createReducer = (asyncReducers) => (state, action) => {
     interfaces: interfacesReducer,
     interfaceExecution: interfaceExecutionReducer,
     interfaceExecutions: interfaceExecutionsReducer,
-    interfaceExecutionDetailsReducer: interfaceExecutionDetailsReducer,
+    interfaceExecutionDetails: interfaceExecutionDetailsReducer,
+    interfaceExecutionDetailErrors: interfaceExecutionDetailErrorsReducer,
     ...asyncReducers,
   });
 

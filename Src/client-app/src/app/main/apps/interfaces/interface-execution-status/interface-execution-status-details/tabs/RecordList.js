@@ -4,9 +4,10 @@ import { Grid, GridColumn as Column } from "@progress/kendo-react-grid";
 import '@progress/kendo-theme-default/dist/all.css';
 import { orange } from '@mui/material/colors';
 import { lighten, styled } from '@mui/material/styles';
+import ErrorCell from "../../custom-cells/ErrorCell";
 
 function RecordList(props) {
-  const processExecutionDetails = useSelector((store) => store.interfaceExecutionDetailsReducer);
+  const processExecutionDetails = useSelector((store) => store.interfaceExecutionDetails);
 
   const initialSort = [
     {
@@ -28,9 +29,11 @@ function RecordList(props) {
         setPage(event.page);
     };
 
+    const MyErrorCell = (props) => <ErrorCell {...props} />;
+
     return (
         <>
-          <Grid
+            <Grid
                 style={{
                     height: "650px",
                     maxWidth: "100%",
@@ -48,7 +51,10 @@ function RecordList(props) {
                 pageSize={8}
                 onPageChange={pageChange}
                 >
-                <Column title='Global Employee Id' width={150} field="globalEmployeeId" />
+                <Column title='Id' width={80} field="id" locked={true} />
+                <Column title='Process ID' width={100} field="processExecutionId" locked={true} />                
+                <Column title='Global Employee ID' width={160} field="globalEmployeeId" locked={true} />
+                <Column title='Has Errors?' width={110} field="hasErrors" cell={MyErrorCell} />
                 <Column title='First Name' width={150} field="firstName"/>
                 <Column title='Last Name' width={150} field="lastName"/>
                 <Column title='Name Suffix Code' width={150} field="nameSuffixCode"/>

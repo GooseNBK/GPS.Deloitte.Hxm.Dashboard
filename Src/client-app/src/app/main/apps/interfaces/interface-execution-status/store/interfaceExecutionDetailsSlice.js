@@ -11,6 +11,9 @@ const interfaceExecutionDetailsSlice = createSlice({
     name: 'interfaceExecutionDetails',
     initialState: [
         {
+            id: 1,
+            hasErrors: 0,
+            processExecutionId: 50,
             globalEmployeeId: '50003069',
             employeeId: '50003069',
             effectDt: '2022-01/01 08:00:00',
@@ -61,6 +64,9 @@ const interfaceExecutionDetailsSlice = createSlice({
             companyCodeDescription: 'CompanyCodeDescription'
         },
         {
+            id: 2,
+            hasErrors: 1,
+            processExecutionId: 50,
             globalEmployeeId: '50003070',
             employeeId: '50003070',
             effectDt: '2022-01/01 08:00:00',
@@ -111,6 +117,9 @@ const interfaceExecutionDetailsSlice = createSlice({
             companyCodeDescription: 'CompanyCodeDescription'
         },
         {
+            id: 3,
+            hasErrors: 0,
+            processExecutionId: 50,
             globalEmployeeId: '50003071',
             employeeId: '50003071',
             effectDt: '2022-01/01 08:00:00',
@@ -161,6 +170,9 @@ const interfaceExecutionDetailsSlice = createSlice({
             companyCodeDescription: 'CompanyCodeDescription'
         },
         {
+            id: 4,
+            hasErrors: 0,
+            processExecutionId: 50,
             globalEmployeeId: '50003072',
             employeeId: '50003072',
             effectDt: '2022-01/01 08:00:00',
@@ -211,6 +223,9 @@ const interfaceExecutionDetailsSlice = createSlice({
             companyCodeDescription: 'CompanyCodeDescription'
         },
         {
+            id: 5,
+            hasErrors: 0,
+            processExecutionId: 50,
             globalEmployeeId: '50003069',
             employeeId: '50003069',
             effectDt: '2022-01/01 08:00:00',
@@ -261,6 +276,9 @@ const interfaceExecutionDetailsSlice = createSlice({
             companyCodeDescription: 'CompanyCodeDescription'
         },
         {
+            id: 6,
+            hasErrors: 0,
+            processExecutionId: 50,
             globalEmployeeId: '50003070',
             employeeId: '50003070',
             effectDt: '2022-01/01 08:00:00',
@@ -311,6 +329,9 @@ const interfaceExecutionDetailsSlice = createSlice({
             companyCodeDescription: 'CompanyCodeDescription'
         },
         {
+            id: 7,
+            hasErrors: 0,
+            processExecutionId: 50,
             globalEmployeeId: '50003071',
             employeeId: '50003071',
             effectDt: '2022-01/01 08:00:00',
@@ -361,6 +382,9 @@ const interfaceExecutionDetailsSlice = createSlice({
             companyCodeDescription: 'CompanyCodeDescription'
         },
         {
+            id: 8,
+            hasErrors: 0,
+            processExecutionId: 50,
             globalEmployeeId: '50003072',
             employeeId: '50003072',
             effectDt: '2022-01/01 08:00:00',
@@ -411,6 +435,9 @@ const interfaceExecutionDetailsSlice = createSlice({
             companyCodeDescription: 'CompanyCodeDescription'
         },
         {
+            id: 9,
+            hasErrors: 0,
+            processExecutionId: 50,
             globalEmployeeId: '50003069',
             employeeId: '50003069',
             effectDt: '2022-01/01 08:00:00',
@@ -461,6 +488,9 @@ const interfaceExecutionDetailsSlice = createSlice({
             companyCodeDescription: 'CompanyCodeDescription'
         },
         {
+            id: 10,
+            hasErrors: 0,
+            processExecutionId: 50,
             globalEmployeeId: '50003070',
             employeeId: '50003070',
             effectDt: '2022-01/01 08:00:00',
@@ -511,6 +541,9 @@ const interfaceExecutionDetailsSlice = createSlice({
             companyCodeDescription: 'CompanyCodeDescription'
         },
         {
+            id: 11,
+            hasErrors: 0,
+            processExecutionId: 50,
             globalEmployeeId: '50003071',
             employeeId: '50003071',
             effectDt: '2022-01/01 08:00:00',
@@ -561,6 +594,9 @@ const interfaceExecutionDetailsSlice = createSlice({
             companyCodeDescription: 'CompanyCodeDescription'
         },
         {
+            id: 12,
+            hasErrors: 0,
+            processExecutionId: 50,
             globalEmployeeId: '50003072',
             employeeId: '50003072',
             effectDt: '2022-01/01 08:00:00',
@@ -611,6 +647,9 @@ const interfaceExecutionDetailsSlice = createSlice({
             companyCodeDescription: 'CompanyCodeDescription'
         },
         {
+            id: 13,
+            hasErrors: 0,
+            processExecutionId: 50,
             globalEmployeeId: '50003069',
             employeeId: '50003069',
             effectDt: '2022-01/01 08:00:00',
@@ -661,6 +700,9 @@ const interfaceExecutionDetailsSlice = createSlice({
             companyCodeDescription: 'CompanyCodeDescription'
         },
         {
+            id: 14,
+            hasErrors: 0,
+            processExecutionId: 50,
             globalEmployeeId: '50003070',
             employeeId: '50003070',
             effectDt: '2022-01/01 08:00:00',
@@ -711,6 +753,9 @@ const interfaceExecutionDetailsSlice = createSlice({
             companyCodeDescription: 'CompanyCodeDescription'
         },
         {
+            id: 15,
+            hasErrors: 0,
+            processExecutionId: 50,
             globalEmployeeId: '50003071',
             employeeId: '50003071',
             effectDt: '2022-01/01 08:00:00',
@@ -761,6 +806,9 @@ const interfaceExecutionDetailsSlice = createSlice({
             companyCodeDescription: 'CompanyCodeDescription'
         },
         {
+            id: 16,
+            hasErrors: 0,
+            processExecutionId: 50,
             globalEmployeeId: '50003072',
             employeeId: '50003072',
             effectDt: '2022-01/01 08:00:00',
