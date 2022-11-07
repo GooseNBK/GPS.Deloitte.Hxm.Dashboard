@@ -20,7 +20,7 @@ const Root = styled(PageSimple)(({ theme }) => ({
 }));
 
 function InterfaceExecutionStatus(props) {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch();  
   const interfaceExecutions = useSelector((store) => store.interfaceExecutions);
   console.log(interfaceExecutions);
 
@@ -44,40 +44,42 @@ function InterfaceExecutionStatus(props) {
 
   return (
     <Root header={<InterfaceExecutionStatusHeader />} content={
-        <div className="w-full p-12 pt-16 sm:pt-24 lg:ltr:pr-0 lg:rtl:pl-0">
-            <div className="w-full p-12 pt-16 sm:pt-24 lg:ltr:pr-0 lg:rtl:pl-0">
-                <PageCarded
-                    content={
-                    <>
-                        <Grid
-                            style={{
-                                height: "650px",
-                            }}
-                            data={interfaceExecutions?.slice(page.skip, page.take + page.skip)}
-                            sortable={true}
-                            skip={page.skip}
-                            take={page.take}
-                            total={interfaceExecutions?.length}
-                            pageable={true}
-                            pageSize={8}
-                            onPageChange={pageChange}
-                            >
-                            <Column title='ID' width={80} field="id" />
-                            <Column title='Interface' width={150} field="interface" filter={"text"}/>
-                            <Column title='Status' width={150} field="status" cell={MyStatusCell}/>
-                            <Column title='Started By' field="startedBy"/>
-                            <Column title='Started On' field="startedOn"/>
-                            <Column title='Finished On' field="finishedOn"/>
-                            <Column title='Processed' field="processed"/>
-                            <Column title='Succeded' field="succeded"/>
-                            <Column title='Failed' field="failed"/>
-                            <Column title='Details' field="id" cell={MyButtonCell}/>
-                        </Grid>
-                    </>
-                    }
-                />
-            </div>
-        </div>
+      <>
+          <div className="w-full p-12 pt-16 sm:pt-24 lg:ltr:pr-0 lg:rtl:pl-0">
+              <div className="w-full p-12 pt-16 sm:pt-24 lg:ltr:pr-0 lg:rtl:pl-0">
+                  <PageCarded
+                      content={
+                      <>
+                          <Grid
+                              style={{
+                                  height: "650px",
+                              }}
+                              data={interfaceExecutions?.slice(page.skip, page.take + page.skip)}
+                              sortable={true}
+                              skip={page.skip}
+                              take={page.take}
+                              total={interfaceExecutions?.length}
+                              pageable={true}
+                              pageSize={8}
+                              onPageChange={pageChange}
+                              >
+                              <Column title='ID' width={80} field="id" />
+                              <Column title='Interface' width={150} field="interface" filter={"text"}/>
+                              <Column title='Status' width={150} field="status" cell={MyStatusCell}/>
+                              <Column title='Started By' field="startedBy"/>
+                              <Column title='Started On' field="startedOn"/>
+                              <Column title='Finished On' field="finishedOn"/>
+                              <Column title='Processed' field="processed"/>
+                              <Column title='Succeded' field="succeded"/>
+                              <Column title='Failed' field="failed"/>
+                              <Column title='Details' field="id" cell={MyButtonCell}/>
+                          </Grid>
+                      </>
+                      }
+                  />
+              </div>
+          </div>
+      </>        
       }
     />
   );

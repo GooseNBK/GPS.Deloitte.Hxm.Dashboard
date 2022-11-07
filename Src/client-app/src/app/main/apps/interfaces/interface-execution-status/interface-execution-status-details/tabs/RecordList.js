@@ -2,12 +2,23 @@ import { useSelector } from "react-redux";
 import { useEffect, useState } from 'react';
 import { Grid, GridColumn as Column } from "@progress/kendo-react-grid";
 import '@progress/kendo-theme-default/dist/all.css';
-import { orange } from '@mui/material/colors';
-import { lighten, styled } from '@mui/material/styles';
 import ErrorCell from "../../custom-cells/ErrorCell";
+import { Box, Modal, SvgIcon, Typography } from '@mui/material';
 
 function RecordList(props) {
   const processExecutionDetails = useSelector((store) => store.interfaceExecutionDetails);
+  const interfaceExecutionDetailErrors = useSelector((store) => store.interfaceExecutionDetailErrors);
+  const [openErrorModal, setOpenErrorModal] = useState(false);
+
+  async function handleOpenModal()
+  {
+    setOpenErrorModal(true);
+  }
+
+  async function handleCloseModal()
+  {
+    setOpenErrorModal(false);
+  }
 
   const initialSort = [
     {
@@ -29,7 +40,19 @@ function RecordList(props) {
         setPage(event.page);
     };
 
-    const MyErrorCell = (props) => <ErrorCell {...props} />;
+    const style = {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: 700,
+        bgcolor: 'background.paper',
+        border: '2px solid #000',
+        boxShadow: 24,
+        p: 4,
+      };
+
+    const MyErrorCell = (props) => <ErrorCell {...props} OpenModal={handleOpenModal} />;
 
     return (
         <>
@@ -96,6 +119,27 @@ function RecordList(props) {
                 <Column title='Company Code' width={150} field="companyCode"/>
                 <Column title='Company Code Description' width={150} field="companyCodeDescription"/>
             </Grid>
+            <Modal open={openErrorModal} onClose={handleCloseModal} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
+                <Box sx={style}>
+                    <div className="flex items-center mt-16 mb-12">
+                        <SvgIcon size={20}>material-outline:people</SvgIcon>
+                        <Typography className="font-semibold text-16 mx-8">Error List</Typography>
+                    </div>
+                    <div>
+                        <Grid
+                            style={{
+                                height: "400px",
+                                maxWidth: "100%",
+                            }}
+                            data={interfaceExecutionDetailErrors}
+                            >
+                            <Column title='Stg Emp Id' width={100} field="stgEmpHistId"/>                
+                            <Column title='Sequence' width={100} field="sequenceNo"/>
+                            <Column title='Message' width={400} field="message"/>
+                        </Grid>
+                    </div>
+                </Box>
+            </Modal>
         </>
     );
   }

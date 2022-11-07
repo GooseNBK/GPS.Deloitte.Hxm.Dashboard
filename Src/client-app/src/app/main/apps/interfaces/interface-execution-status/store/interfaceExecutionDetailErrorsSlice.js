@@ -12,21 +12,21 @@ const interfaceExecutionDetailErrorsSlice = createSlice({
     initialState: [
         {
             id: 1,
-            StgEmpHistId: 1,
-            SequenceNo: 1,
-            Message: 'Division by zero occurred.'
+            stgEmpHistId: 2,
+            sequenceNo: 1,
+            message: 'Division by zero occurred.'
         },
         {
             id: 2,
-            StgEmpHistId: 1,
-            SequenceNo: 2,
-            Message: 'Invalid columna name Salari.'
+            stgEmpHistId: 2,
+            sequenceNo: 2,
+            message: 'Invalid columna name Salari.'
         },
         {
             id: 3,
-            StgEmpHistId: 1,
-            SequenceNo: 3,
-            Message: 'Conversion failed when converting datetime from binary/varbinary string.' 
+            stgEmpHistId: 2,
+            sequenceNo: 3,
+            message: 'Conversion failed when converting datetime from binary/varbinary string.' 
         }
       ],
     reducers: {},
