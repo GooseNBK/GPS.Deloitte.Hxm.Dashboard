@@ -27,20 +27,11 @@ function InterfaceExecutionStatus(props) {
     useEffect(() => {
       //dispatch(getInterfaceExecutions());
   }, [dispatch]);
-
-    const initialSort = [
-    {
-        field: "id",
-        dir: "asc",
-    },
-    ];
-
+  
     const initialDataState = {
     skip: 0,
     take: 10,
-    };
-    
-    const [sort, setSort] = useState(initialSort);
+    };;
 
     const [page, setPage] = useState(initialDataState);
 
@@ -64,10 +55,6 @@ function InterfaceExecutionStatus(props) {
                             }}
                             data={interfaceExecutions?.slice(page.skip, page.take + page.skip)}
                             sortable={true}
-                            sort={sort}
-                            onSortChange={(e) => {
-                                setSort(e.sort);
-                            }}
                             skip={page.skip}
                             take={page.take}
                             total={interfaceExecutions?.length}

@@ -7,7 +7,6 @@ import _ from '@lodash';
 import useThemeMediaQuery from 'src/baseComponents/hooks/useThemeMediaQuery';
 import ProcessExecutionInfo from './tabs/ProcessExecutionInfo';
 import RecordList from './tabs/RecordList';
-import ErrorList from './tabs/ErrorList';
 import InterfaceExecutionStatusDetailHeader from './InterfaceExecutionStatusDetailHeader';
 import getInterfaceExecutionById from '../store/interfaceExecutionSlice';
 import PageCarded from 'src/baseComponents/core/CardedPage/PageCarded';
@@ -37,7 +36,6 @@ function InterfaceExecutionStatusDetail(props) {
             <Tabs value={tabValue} onChange={handleTabChange} indicatorColor="secondary" textColor="secondary" variant="scrollable" scrollButtons="auto" classes={{ root: 'w-full h-64 border-b-1' }}>
               <Tab className="h-64" label="Process Execution" />
               <Tab className="h-64" label="Records" />
-              <Tab className="h-64" label="Errors" />
             </Tabs>
             <div className="p-16 sm:p-24 max-w-3xl">
               <div className={tabValue !== 0 ? 'hidden' : ''}>
@@ -47,9 +45,6 @@ function InterfaceExecutionStatusDetail(props) {
             <div className="p-16 sm:p-24">
               <div className={tabValue !== 1 ? 'hidden' : ''}>
                 <RecordList />
-              </div>
-              <div className={tabValue !== 2 ? 'hidden' : ''}>
-                <ErrorList />
               </div>
             </div>
           </>
