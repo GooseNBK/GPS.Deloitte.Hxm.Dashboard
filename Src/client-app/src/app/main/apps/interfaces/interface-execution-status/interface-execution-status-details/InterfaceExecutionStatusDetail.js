@@ -43,7 +43,8 @@ function InterfaceExecutionStatusDetail(props) {
               <div className={tabValue !== 0 ? 'hidden' : ''}>
                 <ProcessExecutionInfo interface={currentProcessExecution?.interface} startedOn={currentProcessExecution?.startedOn} finishedOn={currentProcessExecution?.finishedOn} startedBy={currentProcessExecution?.startedBy}/>
               </div>
-
+            </div>
+            <div className="p-16 sm:p-24">
               <div className={tabValue !== 1 ? 'hidden' : ''}>
                 <RecordList />
               </div>
