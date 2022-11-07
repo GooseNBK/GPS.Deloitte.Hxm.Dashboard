@@ -4,6 +4,8 @@ import i18n from './i18nSlice';
 import user from './userSlice';
 import interfaceReducer from 'src/app/main/apps/interfaces/interface-execution/store/interfaceSlice';
 import interfacesReducer from 'src/app/main/apps/interfaces/interface-execution/store/interfacesSlice';
+import interfaceExecutionReducer from 'src/app/main/apps/interfaces/interface-execution-status/store/interfaceExecutionSlice';
+import interfaceExecutionsReducer from 'src/app/main/apps/interfaces/interface-execution-status/store/interfaceExecutionsSlice';
 
 const createReducer = (asyncReducers) => (state, action) => {
   const combinedReducer = combineReducers({
@@ -12,6 +14,8 @@ const createReducer = (asyncReducers) => (state, action) => {
     user,
     interface: interfaceReducer,
     interfaces: interfacesReducer,
+    interfaceExecution: interfaceExecutionReducer,
+    interfaceExecutions: interfaceExecutionsReducer,
     ...asyncReducers,
   });
 

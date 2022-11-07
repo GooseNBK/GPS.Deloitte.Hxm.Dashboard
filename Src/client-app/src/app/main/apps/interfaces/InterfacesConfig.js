@@ -2,6 +2,7 @@ import { lazy } from 'react';
 
 const InterfaceExecution = lazy(() => import('./interface-execution/InterfaceExecution'));
 const InterfaceExecutionStatus = lazy(() => import('./interface-execution-status/InterfaceExecutionStatus'));
+const InterfaceExecutionStatusDetail = lazy(() => import('./interface-execution-status/interface-execution-status-details/InterfaceExecutionStatusDetail'));
 const InterfacesConfig = {
   settings: {
     layout: {},
@@ -14,6 +15,10 @@ const InterfacesConfig = {
     {
       path: 'apps/interfaces/interface-execution-status',
       element: <InterfaceExecutionStatus />,
+    },
+    {
+      path: 'apps/interfaces/interface-execution-status/:processExecutionId/*',
+      element: <InterfaceExecutionStatusDetail />,
     },
   ],
 };

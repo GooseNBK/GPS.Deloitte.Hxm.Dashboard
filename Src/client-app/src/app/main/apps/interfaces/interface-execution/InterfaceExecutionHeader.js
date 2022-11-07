@@ -28,7 +28,7 @@ function InterfaceExecutionHeader(props) {
         </div>
         <div className="flex items-center mt-24 sm:mt-0 sm:mx-8 space-x-12">
             <Select value={interfaceId} onChange={handleChange} label="Interface">
-              <MenuItem disabled key="0" value="0">Choose Interface</MenuItem>
+              <MenuItem disabled key="0" value="0">Select an Interface</MenuItem>
               {
                 interfaces?.map(inter => (
                   <MenuItem key={inter.id} value={inter.id}>{inter.name}</MenuItem>
