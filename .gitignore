@@ -452,3 +452,5 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+Src/API/dashboard.db-shm
+Src/API/dashboard.db-wal
