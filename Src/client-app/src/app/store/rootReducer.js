@@ -8,6 +8,9 @@ import interfaceExecutionReducer from 'src/app/main/apps/interfaces/interface-ex
 import interfaceExecutionsReducer from 'src/app/main/apps/interfaces/interface-execution-status/store/interfaceExecutionsSlice';
 import interfaceExecutionDetailsReducer from 'src/app/main/apps/interfaces/interface-execution-status/store/interfaceExecutionDetailsSlice';
 import interfaceExecutionDetailErrorsReducer from 'src/app/main/apps/interfaces/interface-execution-status/store/interfaceExecutionDetailErrorsSlice';
+import successFactorsReducer from 'src/app/main/apps/base/success-factors/store/successFactorsSlice';
+import employeeStagingsReducer from 'src/app/main/apps/base/emp-stg/store/employeeStagingsSlice';
+import employeeStagingHistoricsReducer from 'src/app/main/apps/base/emp-stg-hist/store/employeeStagingHistoricsSlice';
 
 const createReducer = (asyncReducers) => (state, action) => {
   const combinedReducer = combineReducers({
@@ -20,6 +23,9 @@ const createReducer = (asyncReducers) => (state, action) => {
     interfaceExecutions: interfaceExecutionsReducer,
     interfaceExecutionDetails: interfaceExecutionDetailsReducer,
     interfaceExecutionDetailErrors: interfaceExecutionDetailErrorsReducer,
+    successFactors: successFactorsReducer,
+    employeeStagings: employeeStagingsReducer,
+    employeeStagingHistorics: employeeStagingHistoricsReducer,
     ...asyncReducers,
   });
 

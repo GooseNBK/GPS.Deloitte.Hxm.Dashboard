@@ -41,7 +41,7 @@ function InterfaceDashboardApp(props) {
 
             <motion.div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-24 w-full min-w-0 p-24" variants={container} initial="hidden" animate="show">
                 <motion.div variants={item} className="min-w-full sm:min-w-224 min-h-100" key={3}>
-                <TileWidget url={"/InterfaceExecution"} icon={"material-twotone:cloud_done"} title={"EMP SF"} description={"Employee Success Factors"} backgroundColor={"secondary.light"} color={"secondary.dark"} />
+                <TileWidget url={"/apps/base/success-factors"} icon={"material-twotone:cloud_done"} title={"EMP SF"} description={"Employee Success Factors"} backgroundColor={"secondary.light"} color={"secondary.dark"} />
                 </motion.div>
                 <motion.div variants={item} className="min-w-full sm:min-w-224 min-h-100" key={4}>
                 <TileWidget url={"/InterfaceExecution"} icon={"material-twotone:transform"} title={"EMP STG"} description={"Employee Staging Transformed Data"} backgroundColor={"secondary.light"} color={"secondary.dark"} />
