@@ -8,7 +8,7 @@ function InterfaceExecutionHeader(props) {
         <div className="flex flex-auto items-center min-w-0">
           <div className="flex flex-col min-w-0 mx-16">
             <Typography className="text-2xl md:text-5xl font-semibold tracking-tight leading-7 md:leading-snug truncate">
-              Interface Execution Status
+              Interface Execution Status (ProcessExecution)
             </Typography>
           </div>
         </div>

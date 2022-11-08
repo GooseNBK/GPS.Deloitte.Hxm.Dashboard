@@ -77,7 +77,7 @@ function RecordList(props) {
                 <Column title='Id' width={80} field="id" locked={true} />
                 <Column title='Process ID' width={100} field="processExecutionId" locked={true} />                
                 <Column title='Global Employee ID' width={160} field="globalEmployeeId" locked={true} />
-                <Column title='Has Errors?' width={110} field="hasErrors" cell={MyErrorCell} />
+                <Column title='Has Errors?' width={110} field="hasErrors" key="id" cell={MyErrorCell} />
                 <Column title='First Name' width={150} field="firstName"/>
                 <Column title='Last Name' width={150} field="lastName"/>
                 <Column title='Name Suffix Code' width={150} field="nameSuffixCode"/>
@@ -123,17 +123,17 @@ function RecordList(props) {
                 <Box sx={style}>
                     <div className="flex items-center mt-16 mb-12">
                         <SvgIcon size={20}>material-outline:people</SvgIcon>
-                        <Typography className="font-semibold text-16 mx-8">Error List</Typography>
+                        <Typography className="font-semibold text-16 mx-8">Error List (ErrorLog)</Typography>
                     </div>
                     <div>
                         <Grid
                             style={{
-                                height: "400px",
+                                height: "300px",
                                 maxWidth: "100%",
                             }}
                             data={interfaceExecutionDetailErrors}
                             >
-                            <Column title='Stg Emp Id' width={100} field="stgEmpHistId"/>                
+                            <Column title='Record ID' width={100} field="stgEmpHistId"/>                
                             <Column title='Sequence' width={100} field="sequenceNo"/>
                             <Column title='Message' width={400} field="message"/>
                         </Grid>

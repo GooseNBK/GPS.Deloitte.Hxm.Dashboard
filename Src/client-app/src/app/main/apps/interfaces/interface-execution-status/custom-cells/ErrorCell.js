@@ -2,13 +2,20 @@ import { Button } from "@mui/material";
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
 import SvgIcon from 'src/baseComponents/core/SvgIcon/SvgIcon';
-export const ErrorCell = (props) => {    
+import { useDispatch, useSelector } from "react-redux";
+import getInterfaceExecutionDetailErrorsByEmpStgHistId from '../store/interfaceExecutionDetailErrorsSlice';
+import { useEffect } from "react";
+
+export const ErrorCell = (props) => {   
+    const dispatch = useDispatch(); 
     const navigate = useNavigate();
     const field = props.field || "";
     const value = props.dataItem[field];
 
     async function CallBack()
     {
+        console.log(props.dataItem.id);
+        //dispatch(getInterfaceExecutionDetailErrorsByEmpStgHistId(props.dataItem.id));
         props.OpenModal();
     }
 

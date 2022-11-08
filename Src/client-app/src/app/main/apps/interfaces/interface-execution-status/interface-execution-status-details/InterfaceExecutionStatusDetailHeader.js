@@ -35,7 +35,7 @@ function InterfaceExecutionStatusDetailHeader(props) {
               {currentProcessExecution?.interface} ({currentProcessExecution?.status})
             </Typography>
             <Typography variant="caption" className="font-medium">
-              Process Execution Details
+              Process Execution Details (EmpStgHist)
             </Typography>
           </motion.div>
         </div>
