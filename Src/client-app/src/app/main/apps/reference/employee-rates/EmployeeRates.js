@@ -57,7 +57,7 @@ function EmployeeRates(props) {
                               pageSize={8}
                               onPageChange={pageChange}
                               >
-                              <Column title='ID' width={80} field="id" locked="true" />
+                              <Column title='ID' width={80} field="id"/>
                               <Column title='Start Date' width={150} field="startDate" />
                               <Column title='End Date' width={150} field="endDate" />     
                               <Column title='Rate' width={150} field="rate" />
