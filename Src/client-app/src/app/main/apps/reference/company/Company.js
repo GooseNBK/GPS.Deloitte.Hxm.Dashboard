@@ -8,13 +8,10 @@ import { Grid, GridColumn as Column } from "@progress/kendo-react-grid";
 import '@progress/kendo-theme-default/dist/all.css';
 import getCompanies from './store/CompaniesSlice';
 import { useDispatch, useSelector } from "react-redux";
-import { Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, Modal, TextField, Typography } from '@mui/material';
+import { Box, Button, FormControl, Modal, TextField, Typography } from '@mui/material';
 import SvgIcon from 'src/baseComponents/core/SvgIcon';
-import { DatePicker, DesktopDatePicker } from '@mui/x-date-pickers';
+import { DesktopDatePicker } from '@mui/x-date-pickers';
 import moment from 'moment/moment';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import Stack from '@mui/material/Stack';
 
 
 const Root = styled(PageSimple)(({ theme }) => ({
@@ -108,7 +105,7 @@ function Company(props) {
                               <Column title='Updated By' width={150} field="updatedBy" />
                           </Grid>
                           <Modal open={openModal} onClose={handleCloseModal} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
-                              <Box sx={style}>
+                              <Box component="form" sx={style}>
                                   <div className="flex items-center mt-16 mb-12">
                                       <SvgIcon size={20}>material-solid:fiber_new</SvgIcon>
                                       <Typography className="font-semibold text-16 mx-8">Add New Company (REF_Company)</Typography>
@@ -121,20 +118,25 @@ function Company(props) {
                                     variant="outlined"
                                     fullWidth
                                     value={code}
+                                    autoFocus
                                     onChange={(e) => setCode(e.target.value)}
                                   />
-                                  <DesktopDatePicker
-                                    label="Start Date"
-                                    value={startDate}
-                                    onChange={(e) => setStartDate(e.target.value)}
-                                    renderInput={(params) => <TextField {...params} />}
-                                  />
-                                  <DesktopDatePicker
-                                    label="End Date"
-                                    value={endDate}
-                                    onChange={(e) => setEndDate(e.target.value)}
-                                    renderInput={(params) => <TextField {...params} />}
-                                  />
+                                  <FormControl sx={{minWidth: 120 }}>
+                                    <DesktopDatePicker
+                                        label="Start Date"
+                                        value={startDate}
+                                        onChange={(e) => setStartDate(e.target.value)}
+                                        renderInput={(params) => <TextField {...params} />}
+                                      />
+                                  </FormControl>
+                                  <FormControl sx={{ ml: 2, minWidth: 120 }}>
+                                    <DesktopDatePicker
+                                        label="End Date"
+                                        value={endDate}
+                                        onChange={(e) => setEndDate(e.target.value)}
+                                        renderInput={(params) => <TextField {...params} />}
+                                      />
+                                  </FormControl>
                                   <TextField
                                     className="mt-8 mb-16"
                                     label="Cost Point Organization"
