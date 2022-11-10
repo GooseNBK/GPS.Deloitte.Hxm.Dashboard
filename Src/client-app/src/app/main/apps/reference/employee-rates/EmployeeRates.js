@@ -3,10 +3,10 @@ import PageCarded from 'src/baseComponents/core/CardedPage/PageCarded'
 import PageSimple from 'src/baseComponents/core/SimplePage/PageSimple'
 import _ from '@lodash';
 import { styled } from '@mui/material/styles';
-import MapInfoHeader from './MapInfoHeader';
+import EmployeeRatesHeader from './EmployeeRatesHeader';
 import { Grid, GridColumn as Column } from "@progress/kendo-react-grid";
 import '@progress/kendo-theme-default/dist/all.css';
-import getMapInfos from './store/mapInfosSlice';
+import getEmployeeRates from './store/employeeRatesSlice';
 import { useDispatch, useSelector } from "react-redux";
 
 
@@ -17,12 +17,12 @@ const Root = styled(PageSimple)(({ theme }) => ({
   },
 }));
 
-function MapInfo(props) {
+function EmployeeRates(props) {
   const dispatch = useDispatch();  
-  const mapInfos = useSelector((store) => store.mapInfos);
+  const employeeRates = useSelector((store) => store.employeeRates);
 
     useEffect(() => {
-      //dispatch(getMapInfos());
+      //dispatch(getEmployeeRates());
   }, [dispatch]);
   
     const initialDataState = {
@@ -37,7 +37,7 @@ function MapInfo(props) {
     };
 
   return (
-    <Root header={<MapInfoHeader />} content={
+    <Root header={<EmployeeRatesHeader />} content={
       <>
           <div className="w-full p-12 pt-16 sm:pt-24 lg:ltr:pr-0 lg:rtl:pl-0">
               <div className="w-full p-12 pt-16 sm:pt-24 lg:ltr:pr-0 lg:rtl:pl-0">
@@ -48,20 +48,19 @@ function MapInfo(props) {
                               style={{
                                   height: "650px",
                               }}
-                              data={mapInfos?.slice(page.skip, page.take + page.skip)}
+                              data={employeeRates?.slice(page.skip, page.take + page.skip)}
                               sortable={true}
                               skip={page.skip}
                               take={page.take}
-                              total={mapInfos?.length}
+                              total={employeeRates?.length}
                               pageable={true}
                               pageSize={8}
                               onPageChange={pageChange}
                               >
                               <Column title='ID' width={80} field="id" locked="true" />
-                              <Column title='Key 1' width={150} field="key1" locked="true"  />
-                              <Column title='Key 2' width={150} field="key2" />
-                              <Column title='Key 3' width={150} field="key3" />     
-                              <Column title='Secure' width={150} field="secureByCpAdmin" />
+                              <Column title='Start Date' width={150} field="startDate" />
+                              <Column title='End Date' width={150} field="endDate" />     
+                              <Column title='Rate' width={150} field="rate" />
                               <Column title='Created On' width={150} field="timestampCreated" />
                               <Column title='Created By' width={150} field="createdBy" />
                               <Column title='Updated On' width={150} field="timestampUpdated" />
@@ -78,4 +77,4 @@ function MapInfo(props) {
   );
 }
 
-export default MapInfo;
+export default EmployeeRates;

@@ -53,19 +53,19 @@ function InterfaceDashboardApp(props) {
 
             <motion.div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-24 w-full min-w-0 p-24" variants={container} initial="hidden" animate="show">
                 <motion.div variants={item} className="min-w-full sm:min-w-224 min-h-100" key={6}>
-                <TileWidget url={"#"} icon={"material-twotone:book"} title={"REF GLC"} description={"Provide description"} backgroundColor={"secondary.light"} color={"secondary.dark"} />
+                <TileWidget url={"/apps/reference/glc"} icon={"material-twotone:book"} title={"REF GLC"} description={"Provide description"} backgroundColor={"secondary.light"} color={"secondary.dark"} />
                 </motion.div>
                 <motion.div variants={item} className="min-w-full sm:min-w-224 min-h-100" key={7}>
-                <TileWidget url={"#"} icon={"material-twotone:business"} title={"REF Company"} description={"Provide description"} backgroundColor={"secondary.light"} color={"secondary.dark"} />
+                <TileWidget url={"/apps/reference/company"} icon={"material-twotone:business"} title={"REF Company"} description={"Provide description"} backgroundColor={"secondary.light"} color={"secondary.dark"} />
                 </motion.div>
                 <motion.div variants={item} className="min-w-full sm:min-w-224 min-h-100" key={8}>
-                <TileWidget url={"#"} icon={"material-twotone:money"} title={"REF EMP RATES"} description={"Provide description"} backgroundColor={"secondary.light"} color={"secondary.dark"} />
+                <TileWidget url={"/apps/reference/employee-rates"} icon={"material-twotone:money"} title={"REF EMP RATES"} description={"Provide description"} backgroundColor={"secondary.light"} color={"secondary.dark"} />
                 </motion.div>
                 <motion.div variants={item} className="min-w-full sm:min-w-224 min-h-100" key={9}>
-                <TileWidget url={"#"} icon={"material-twotone:account_balance"} title={"REF EXCH RATES"} description={"Provide description"} backgroundColor={"secondary.light"} color={"secondary.dark"} />
+                <TileWidget url={"/apps/reference/exchange-rates"} icon={"material-twotone:account_balance"} title={"REF EXCH RATES"} description={"Provide description"} backgroundColor={"secondary.light"} color={"secondary.dark"} />
                 </motion.div>
                 <motion.div variants={item} className="min-w-full sm:min-w-224 min-h-100" key={10}>
-                <TileWidget url={"#"} icon={"material-twotone:map"} title={"REF MAP INFO"} description={"Provide description"} backgroundColor={"secondary.light"} color={"secondary.dark"} />
+                <TileWidget url={"/apps/reference/map-info"} icon={"material-twotone:map"} title={"REF MAP INFO"} description={"Provide description"} backgroundColor={"secondary.light"} color={"secondary.dark"} />
                 </motion.div>
             </motion.div>
         </div>
