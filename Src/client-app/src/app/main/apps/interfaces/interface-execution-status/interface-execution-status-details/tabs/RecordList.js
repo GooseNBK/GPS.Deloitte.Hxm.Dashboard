@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 import { Grid, GridColumn as Column } from "@progress/kendo-react-grid";
 import '@progress/kendo-theme-default/dist/all.css';
 import ErrorCell from "../../custom-cells/ErrorCell";
-import { Box, Modal, SvgIcon, Typography } from '@mui/material';
+import { Box, Modal, Typography } from '@mui/material';
+import SvgIcon from "src/baseComponents/core/SvgIcon";
 
 function RecordList(props) {
   const processExecutionDetails = useSelector((store) => store.interfaceExecutionDetails);
@@ -122,7 +123,7 @@ function RecordList(props) {
             <Modal open={openErrorModal} onClose={handleCloseModal} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
                 <Box sx={style}>
                     <div className="flex items-center mt-16 mb-12">
-                        <SvgIcon size={20}>material-outline:people</SvgIcon>
+                        <SvgIcon size={20}>material-solid:nearby_error</SvgIcon>
                         <Typography className="font-semibold text-16 mx-8">Error List (ErrorLog)</Typography>
                     </div>
                     <div>

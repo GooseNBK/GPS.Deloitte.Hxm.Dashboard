@@ -9,7 +9,8 @@ import '@progress/kendo-theme-default/dist/all.css';
 import getEmployeeStagingHistorics from './store/employeeStagingHistoricsSlice';
 import { useDispatch, useSelector } from "react-redux";
 import ErrorCell from "src/app/main/apps/interfaces/interface-execution-status/custom-cells/ErrorCell";
-import { Box, Modal, SvgIcon, Typography } from '@mui/material';
+import { Box, Modal, Typography } from '@mui/material';
+import SvgIcon from 'src/baseComponents/core/SvgIcon';
 
 const Root = styled(PageSimple)(({ theme }) => ({
   '& .PageSimple-header': {
@@ -132,7 +133,7 @@ function EmployeeStagingHistoric(props) {
                           <Modal open={openErrorModal} onClose={handleCloseModal} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
                             <Box sx={style}>
                                 <div className="flex items-center mt-16 mb-12">
-                                    <SvgIcon size={20}>material-outline:people</SvgIcon>
+                                    <SvgIcon size={20}>material-solid:nearby_error</SvgIcon>
                                     <Typography className="font-semibold text-16 mx-8">Error List (ErrorLog)</Typography>
                                 </div>
                                 <div>
