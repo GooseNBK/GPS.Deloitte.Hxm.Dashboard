@@ -8,6 +8,8 @@ import { Grid, GridColumn as Column } from "@progress/kendo-react-grid";
 import '@progress/kendo-theme-default/dist/all.css';
 import getMapInfos from './store/mapInfosSlice';
 import { useDispatch, useSelector } from "react-redux";
+import { Box, Button, Modal, Switch, TextField, Typography } from '@mui/material';
+import SvgIcon from 'src/baseComponents/core/SvgIcon';
 
 
 const Root = styled(PageSimple)(({ theme }) => ({
@@ -20,6 +22,39 @@ const Root = styled(PageSimple)(({ theme }) => ({
 function MapInfo(props) {
   const dispatch = useDispatch();  
   const mapInfos = useSelector((store) => store.mapInfos);
+  const [openModal, setOpenModal] = useState(false);
+
+  let [id, setId] = useState(0);
+  let [key1, setKey1] = useState("");
+  let [key2, setKey2] = useState("");
+  let [key3, setKey3] = useState("");
+  let [secureByCpAdmin, setSecureByCpAdmin] = useState("");
+  let [timestampCreated, setTimestampCreated] = useState("");
+  let [createdBy, setCreatedBy] = useState("");
+  let [timestampUpdated, setTimestampUpdated] = useState("");
+  let [updatedBy, setUpdatedBy] = useState("");
+
+  async function handleOpenModal()
+  {
+    setOpenModal(true);
+  }
+
+  async function handleCloseModal()
+  {
+    setOpenModal(false);
+  }
+
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 700,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+  };
 
     useEffect(() => {
       //dispatch(getMapInfos());
@@ -37,7 +72,7 @@ function MapInfo(props) {
     };
 
   return (
-    <Root header={<MapInfoHeader />} content={
+    <Root header={<MapInfoHeader OpenModal={handleOpenModal} />} content={
       <>
           <div className="w-full p-12 pt-16 sm:pt-24 lg:ltr:pr-0 lg:rtl:pl-0">
               <div className="w-full p-12 pt-16 sm:pt-24 lg:ltr:pr-0 lg:rtl:pl-0">
@@ -57,8 +92,8 @@ function MapInfo(props) {
                               pageSize={8}
                               onPageChange={pageChange}
                               >
-                              <Column title='ID' width={80} field="id" locked="true" />
-                              <Column title='Key 1' width={150} field="key1" locked="true"  />
+                              <Column title='ID' width={80} field="id"/>
+                              <Column title='Key 1' width={150} field="key1"/>
                               <Column title='Key 2' width={150} field="key2" />
                               <Column title='Key 3' width={150} field="key3" />     
                               <Column title='Secure' width={150} field="secureByCpAdmin" />
@@ -67,6 +102,46 @@ function MapInfo(props) {
                               <Column title='Updated On' width={150} field="timestampUpdated" />
                               <Column title='Updated By' width={150} field="updatedBy" />
                           </Grid>
+                          <Modal open={openModal} onClose={handleCloseModal} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
+                            <Box sx={style}>
+                                <div className="flex items-center mt-16 mb-12">
+                                    <SvgIcon size={20}>material-solid:fiber_new</SvgIcon>
+                                    <Typography className="font-semibold text-16 mx-8">Add Map Info (REF_MapInfo)</Typography>
+                                </div>
+                                <div>
+                                <TextField
+                                  className="mt-8 mb-16"
+                                  label="Key 1"
+                                  id="key1"
+                                  variant="outlined"
+                                  fullWidth
+                                  value={key1}
+                                />
+                                <TextField
+                                  className="mt-8 mb-16"
+                                  label="Key 2"
+                                  id="key2"
+                                  variant="outlined"
+                                  fullWidth
+                                  value={key2}
+                                />
+                                <TextField
+                                  className="mt-8 mb-16"
+                                  label="Key 3"
+                                  id="key3"
+                                  variant="outlined"
+                                  fullWidth
+                                  value={key3}
+                                />                                
+                                <Switch defaultChecked /> Cost Point Secured
+                                <div align="right">
+                                  <Button className="whitespace-nowrap mx-4" variant="contained" color="secondary" startIcon={<SvgIcon className="hidden sm:flex">material-solid:save</SvgIcon>}>
+                                    Save
+                                  </Button>
+                                </div>
+                                </div>
+                            </Box>
+                        </Modal>
                       </>
                       }
                   />

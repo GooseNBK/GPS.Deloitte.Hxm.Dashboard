@@ -8,6 +8,13 @@ import { Grid, GridColumn as Column } from "@progress/kendo-react-grid";
 import '@progress/kendo-theme-default/dist/all.css';
 import getCompanies from './store/CompaniesSlice';
 import { useDispatch, useSelector } from "react-redux";
+import { Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, Modal, TextField, Typography } from '@mui/material';
+import SvgIcon from 'src/baseComponents/core/SvgIcon';
+import { DesktopDatePicker } from '@mui/x-date-pickers';
+import moment from 'moment/moment';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import Stack from '@mui/material/Stack';
 
 
 const Root = styled(PageSimple)(({ theme }) => ({
@@ -20,6 +27,39 @@ const Root = styled(PageSimple)(({ theme }) => ({
 function Company(props) {
   const dispatch = useDispatch();  
   const companies = useSelector((store) => store.companies);
+  const [openModal, setOpenModal] = useState(false);
+
+  let [id, setId] = useState(0);
+  let [code, setCode] = useState("");
+  let [startDate, setStartDate] = useState(moment().format('YYYY-MM-DD'));
+  let [endDate, setEndDate] = useState(moment().format('YYYY-MM-DD'));
+  let [costPointOrganizacion, setCostPointOrganizacion] = useState("");
+  let [timestampCreated, setTimestampCreated] = useState("");
+  let [createdBy, setCreatedBy] = useState("");
+  let [timestampUpdated, setTimestampUpdated] = useState("");
+  let [updatedBy, setUpdatedBy] = useState("");
+
+  async function handleOpenModal()
+  {
+    setOpenModal(true);
+  }
+
+  async function handleCloseModal()
+  {
+    setOpenModal(false);
+  }
+
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 700,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+  };
 
     useEffect(() => {
       //dispatch(getCompanies());
@@ -37,7 +77,7 @@ function Company(props) {
     };
 
   return (
-    <Root header={<CompanyHeader />} content={
+    <Root header={<CompanyHeader OpenModal={handleOpenModal}  />} content={
       <>
           <div className="w-full p-12 pt-16 sm:pt-24 lg:ltr:pr-0 lg:rtl:pl-0">
               <div className="w-full p-12 pt-16 sm:pt-24 lg:ltr:pr-0 lg:rtl:pl-0">
@@ -57,7 +97,7 @@ function Company(props) {
                               pageSize={8}
                               onPageChange={pageChange}
                               >
-                              <Column title='ID' width={100} field="id" locked="true" />
+                              <Column title='ID' width={100} field="id"/>
                               <Column title='Code' width={200} field="code"/>
                               <Column title='Start Date' width={150} field="startDate" />
                               <Column title='End Date' width={150} field="endDate" />     
@@ -67,6 +107,99 @@ function Company(props) {
                               <Column title='Updated On' width={150} field="timestampUpdated" />
                               <Column title='Updated By' width={150} field="updatedBy" />
                           </Grid>
+                          <Dialog open={openModal} aria-labelledby="form-dialog-title">
+                            <DialogContent>
+                              <DialogContentText>
+                                  <SvgIcon size={20}>material-solid:fiber_new</SvgIcon>
+                                  <Typography className="font-semibold text-16 mx-8">Add New Company (REF_Company)</Typography>
+                              </DialogContentText>
+                              <TextField
+                                    className="mt-8 mb-16"
+                                    label="Code"
+                                    id="code"
+                                    variant="outlined"
+                                    fullWidth
+                                    value={code}
+                                    onChange={(e) => setCode(e.target.value)}
+                                  />
+                                  <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                    <Stack spacing={3}>
+                                      <DesktopDatePicker
+                                        label="Start Date"
+                                        value={startDate}
+                                        onChange={(e) => setStartDate(e.target.value)}
+                                        renderInput={(params) => <TextField {...params} />}
+                                      />
+                                      <DesktopDatePicker
+                                        label="End Date"
+                                        value={endDate}
+                                        onChange={(e) => setEndDate(e.target.value)}
+                                        renderInput={(params) => <TextField {...params} />}
+                                      />
+                                    </Stack>
+                                  </LocalizationProvider>
+                                  
+                                  <TextField
+                                    className="mt-8 mb-16"
+                                    label="Cost Point Organization"
+                                    id="cpOrganization"
+                                    variant="outlined"
+                                    fullWidth
+                                    value={costPointOrganizacion}
+                                    onChange={(e) => setCostPointOrganizacion(e.target.value)}
+                                  />
+                            </DialogContent>
+                            <DialogActions>
+                              <Button className="whitespace-nowrap mx-4" variant="contained" color="secondary" startIcon={<SvgIcon className="hidden sm:flex">material-solid:save</SvgIcon>}>
+                                Save
+                              </Button>
+                            </DialogActions>
+                          </Dialog>
+                          {/* <Modal open={openModal} onClose={handleCloseModal} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
+                              <Box sx={style}>
+                                  <div className="flex items-center mt-16 mb-12">
+                                      <SvgIcon size={20}>material-solid:fiber_new</SvgIcon>
+                                      <Typography className="font-semibold text-16 mx-8">Add New Company (REF_Company)</Typography>
+                                  </div>
+                                  <div>
+                                  <TextField
+                                    className="mt-8 mb-16"
+                                    label="Code"
+                                    id="code"
+                                    variant="outlined"
+                                    fullWidth
+                                    value={code}
+                                    onChange={(e) => setCode(e.target.value)}
+                                  />
+                                  <DesktopDatePicker
+                                    label="Start Date"
+                                    value={startDate}
+                                    onChange={(e) => setStartDate(e.target.value)}
+                                    renderInput={(params) => <TextField {...params} />}
+                                  />
+                                  <DesktopDatePicker
+                                    label="End Date"
+                                    value={endDate}
+                                    onChange={(e) => setEndDate(e.target.value)}
+                                    renderInput={(params) => <TextField {...params} />}
+                                  />
+                                  <TextField
+                                    className="mt-8 mb-16"
+                                    label="Cost Point Organization"
+                                    id="cpOrganization"
+                                    variant="outlined"
+                                    fullWidth
+                                    value={costPointOrganizacion}
+                                    onChange={(e) => setCostPointOrganizacion(e.target.value)}
+                                  />
+                                  <>
+                                    <Button className="whitespace-nowrap mx-4" variant="contained" color="secondary" startIcon={<SvgIcon className="hidden sm:flex">material-solid:save</SvgIcon>}>
+                                      Save
+                                    </Button>
+                                  </>
+                                  </div>
+                              </Box>
+                          </Modal> */}
                       </>
                       }
                   />

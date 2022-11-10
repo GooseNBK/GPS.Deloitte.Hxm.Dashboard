@@ -8,7 +8,7 @@ import { Grid, GridColumn as Column } from "@progress/kendo-react-grid";
 import '@progress/kendo-theme-default/dist/all.css';
 import getGlcs from './store/glcsSlice';
 import { useDispatch, useSelector } from "react-redux";
-import { Box, Modal, Typography } from '@mui/material';
+import { Box, Button, Modal, TextField, Typography } from '@mui/material';
 import SvgIcon from 'src/baseComponents/core/SvgIcon';
 
 
@@ -24,6 +24,14 @@ function Glc(props) {
   const glcs = useSelector((store) => store.glcs);
   const [openModal, setOpenModal] = useState(false);
 
+  let [id, setId] = useState(0);
+  let [description, setDescription] = useState("");
+  let [costPointRole, setCostPointRole] = useState("");
+  let [level, setLevel] = useState("");
+  let [timestampCreated, setTimestampCreated] = useState("");
+  let [createdBy, setCreatedBy] = useState("");
+  let [timestampUpdated, setTimestampUpdated] = useState("");
+  let [updatedBy, setUpdatedBy] = useState("");
   async function handleOpenModal()
   {
     setOpenModal(true);
@@ -82,7 +90,7 @@ function Glc(props) {
                               pageSize={8}
                               onPageChange={pageChange}
                               >
-                              <Column title='ID' width={100} field="id" locked="true" />
+                              <Column title='ID' width={100} field="id"/>
                               <Column title='Description' width={300} field="description" />
                               <Column title='Cost Point Role' width={150} field="costPointRole" />
                               <Column title='Level' width={150} field="level" />
@@ -98,7 +106,38 @@ function Glc(props) {
                                     <Typography className="font-semibold text-16 mx-8">Add New GLC (REF_Glc)</Typography>
                                 </div>
                                 <div>
-                                    
+                                <TextField
+                                  className="mt-8 mb-16"
+                                  label="Description"
+                                  id="Description"
+                                  variant="outlined"
+                                  fullWidth
+                                  multiline
+                                  rows={4}
+                                  autoFocus
+                                  value={description}
+                                />
+                                <TextField
+                                  className="mt-8 mb-16"
+                                  label="Costpoint Role"
+                                  id="cpRole"
+                                  variant="outlined"
+                                  fullWidth
+                                  value={costPointRole}
+                                />
+                                <TextField
+                                  className="mt-8 mb-16"
+                                  label="Level"
+                                  id="level"
+                                  variant="outlined"
+                                  fullWidth
+                                  value={level}
+                                />
+                                <div align="right">
+                                  <Button className="whitespace-nowrap mx-4" variant="contained" color="secondary" startIcon={<SvgIcon className="hidden sm:flex">material-solid:save</SvgIcon>}>
+                                    Save
+                                  </Button>
+                                </div>
                                 </div>
                             </Box>
                         </Modal>
