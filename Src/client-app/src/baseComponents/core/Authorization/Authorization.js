@@ -60,8 +60,7 @@ class Authorization extends Component {
       loginRedirectUrl = pathname;
     } else {
       /*
-        User is member
-        User must be on unAuthorized page or just logged in
+        User is registered or in Azure AD
         Redirect to dashboard or loginRedirectUrl
         */
       setTimeout(() => history.push(redirectUrl), 0);
@@ -70,7 +69,6 @@ class Authorization extends Component {
   }
 
   render() {
-    // console.info('Fuse Authorization rendered', this.state.accessGranted);
     return this.state.accessGranted ? <>{this.props.children}</> : null;
   }
 }
