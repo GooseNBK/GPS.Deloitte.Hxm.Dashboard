@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import { memo, useContext } from 'react';
 import { useSelector } from 'react-redux';
 import { useRoutes } from 'react-router-dom';
-import { selectFuseCurrentLayoutConfig } from 'app/store/fuse/settingsSlice';
+import { selectFuseCurrentLayoutConfig } from 'app/store/common/settingsSlice';
 import FooterLayout2 from './components/FooterLayout2';
 import LeftSideLayout2 from './components/LeftSideLayout2';
 import NavbarWrapperLayout2 from './components/NavbarWrapperLayout2';

@@ -1,5 +1,5 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import dash from './fuse';
+import dash from './common';
 import i18n from './i18nSlice';
 import user from './userSlice';
 import interfaceReducer from 'src/app/main/apps/interfaces/interface-execution/store/interfaceSlice';

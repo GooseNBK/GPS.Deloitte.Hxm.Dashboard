@@ -4,7 +4,7 @@ import Toolbar from '@mui/material/Toolbar';
 import clsx from 'clsx';
 import { memo } from 'react';
 import { useSelector } from 'react-redux';
-import { selectFuseCurrentLayoutConfig, selectToolbarTheme } from 'app/store/fuse/settingsSlice';
+import { selectFuseCurrentLayoutConfig, selectToolbarTheme } from 'app/store/common/settingsSlice';
 import AdjustFontSize from '../../shared-components/AdjustFontSize';
 import FullScreenToggle from '../../shared-components/FullScreenToggle';
 import NotificationPanelToggleButton from '../../shared-components/notificationPanel/NotificationPanelToggleButton';

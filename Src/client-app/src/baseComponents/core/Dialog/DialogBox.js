@@ -4,7 +4,7 @@ import {
   closeDialog,
   selectFuseDialogOptions,
   selectFuseDialogState,
-} from 'app/store/fuse/dialogSlice';
+} from 'app/store/common/dialogSlice';
 
 function DialogBox(props) {
   const dispatch = useDispatch();

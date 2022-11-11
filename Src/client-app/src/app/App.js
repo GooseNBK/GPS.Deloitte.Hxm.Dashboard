@@ -10,7 +10,7 @@ import { CacheProvider } from '@emotion/react';
 import { selectCurrentLanguageDirection } from 'app/store/i18nSlice';
 import { selectUser } from 'app/store/userSlice';
 import themeLayouts from 'app/theme-layouts/themeLayouts';
-import { selectMainTheme } from 'app/store/fuse/settingsSlice';
+import { selectMainTheme } from 'app/store/common/settingsSlice';
 import Authorization from 'src/baseComponents/core/Authorization';
 import settingsConfig from 'app/configs/settingsConfig';
 import withAppProviders from './withAppProviders';

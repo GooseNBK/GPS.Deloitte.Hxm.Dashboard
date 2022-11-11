@@ -4,7 +4,7 @@ import Toolbar from '@mui/material/Toolbar';
 import clsx from 'clsx';
 import { memo } from 'react';
 import { useSelector } from 'react-redux';
-import { selectFooterTheme } from 'app/store/fuse/settingsSlice';
+import { selectFooterTheme } from 'app/store/common/settingsSlice';
 
 function FooterLayout2(props) {
   const footerTheme = useSelector(selectFooterTheme);

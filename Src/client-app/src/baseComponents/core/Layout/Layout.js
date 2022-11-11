@@ -6,7 +6,7 @@ import {
   selectFuseCurrentSettings,
   selectFuseDefaultSettings,
   setSettings,
-} from 'app/store/fuse/settingsSlice';
+} from 'app/store/common/settingsSlice';
 import { memo, useCallback, useContext, useMemo, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { matchRoutes, useLocation } from 'react-router-dom';

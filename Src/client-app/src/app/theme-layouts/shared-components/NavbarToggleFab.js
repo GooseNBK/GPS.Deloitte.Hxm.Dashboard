@@ -2,12 +2,12 @@ import Fab from '@mui/material/Fab';
 import { styled } from '@mui/material/styles';
 
 import Tooltip from '@mui/material/Tooltip';
-import { navbarToggle, navbarToggleMobile } from 'app/store/fuse/navbarSlice';
+import { navbarToggle, navbarToggleMobile } from 'app/store/common/navbarSlice';
 import clsx from 'clsx';
 import { useDispatch, useSelector } from 'react-redux';
 import useThemeMediaQuery from 'src/baseComponents/hooks/useThemeMediaQuery';
 import SvgIcon from 'src/baseComponents/core/SvgIcon';
-import { selectFuseCurrentLayoutConfig } from 'app/store/fuse/settingsSlice';
+import { selectFuseCurrentLayoutConfig } from 'app/store/common/settingsSlice';
 
 const Root = styled(Tooltip)(({ theme, position }) => ({
   '& > .button': {
