@@ -60,7 +60,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false, expanded: false
         },
         {
             id: '2',
@@ -112,7 +112,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false
         },
         {
             id: '3',
@@ -164,7 +164,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false
         },
         {
             id: '4',
@@ -216,7 +216,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false
         },
         {
             id: '5',
@@ -268,7 +268,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false
         },
         {
             id: '6',
@@ -320,7 +320,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false
         },
         {
             id: '7',
@@ -372,7 +372,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false
         },
         {
             id: '1',
@@ -424,7 +424,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false
         },
         {
             id: '2',
@@ -476,7 +476,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false
         },
         {
             id: '3',
@@ -528,7 +528,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false
         },
         {
             id: '4',
@@ -580,7 +580,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false
         },
         {
             id: '5',
@@ -632,7 +632,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false
         },
         {
             id: '6',
@@ -684,7 +684,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false
         },
         {
             id: '7',
@@ -736,7 +736,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false
         },
         {
             id: '1',
@@ -788,7 +788,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false
         },
         {
             id: '2',
@@ -840,7 +840,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false
         },
         {
             id: '3',
@@ -892,7 +892,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false
         },
         {
             id: '4',
@@ -944,7 +944,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false
         },
         {
             id: '5',
@@ -996,7 +996,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false
         },
         {
             id: '6',
@@ -1048,7 +1048,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false
         },
         {
             id: '7',
@@ -1100,7 +1100,7 @@ const successFactorsSlice = createSlice({
             standardHours: '40',
             suffix: 'SU4',
             textfield: 'RISK AND FINANCIAL ADVISORY',
-            waers: 'USD'
+            waers: 'USD', expanded: false
         }
     ],
     reducers: {},

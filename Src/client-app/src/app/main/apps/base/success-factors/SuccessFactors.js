@@ -8,6 +8,9 @@ import { Grid, GridColumn as Column } from "@progress/kendo-react-grid";
 import '@progress/kendo-theme-default/dist/all.css';
 import getSuccessFactors from './store/successFactorsSlice';
 import { useDispatch, useSelector } from "react-redux";
+import Button from '@mui/material/Button';
+import SvgIcon from 'src/baseComponents/core/SvgIcon/SvgIcon';
+import Badge from '@mui/material/Badge';
 
 
 const Root = styled(PageSimple)(({ theme }) => ({
@@ -20,6 +23,9 @@ const Root = styled(PageSimple)(({ theme }) => ({
 function SuccessFactors(props) {
   const dispatch = useDispatch();  
   const successFactors = useSelector((store) => store.successFactors);
+  const successFactorsErrors = useSelector((store) => store.successFactorsErrors);
+
+  const [data, setData] = useState(successFactors);
 
     useEffect(() => {
       //dispatch(getSuccessFactors());
@@ -36,6 +42,74 @@ function SuccessFactors(props) {
         setPage(event.page);
     };
 
+    const DetailComponent = (props) => {      
+      return (
+        <div>
+          <section
+            style={{
+              width: "300px",
+              float: "left",
+            }}
+          >
+            <p style={{paddingBottom: "15px"}}>
+              <strong>Global Employee ID: </strong> 5003078
+            </p>
+            <p style={{paddingBottom: "15px"}}>
+              <strong>Last Error:</strong> Name is null
+            </p>
+            <p style={{paddingBottom: "15px"}}>
+              <strong>Status:</strong> Pending
+            </p>
+            <p style={{paddingBottom: "15px"}}>
+              <strong>Date:</strong> 04/15/2023
+            </p>
+            <p style={{paddingBottom: "15px"}}>
+              <Button className="mx-8 whitespace-nowrap" variant="contained" color="secondary">
+                  <SvgIcon size={20}>material-outline:bolt</SvgIcon>
+                  <span className="mx-8">Reprocess</span>
+              </Button>
+            </p>
+            <p style={{paddingBottom: "15px"}}>
+              <Button className="mx-8 whitespace-nowrap" variant="contained" color="primary">
+                  <SvgIcon size={20}>material-outline:bolt</SvgIcon>
+                  <span className="mx-8">Refresh from SF</span>
+              </Button>
+            </p>
+          </section>
+          <Grid
+            style={{
+              width: "950px",
+            }}
+            data={successFactorsErrors}
+          >            
+            <Column title='Global Employee ID' width={180} field="globalEmployeeId" />
+            <Column title='Date' width={150} field="date" />
+            <Column title='Process Execution ID' width={150} field="processExecution" />
+            <Column title='Error' width={150} field="error" />
+            <Column title='Step' width={150} field="step" />
+            <Column title='Status' width={150} field="status" />
+          </Grid>          
+        </div>
+      );
+    };    
+
+    const expandChange = (event) => {
+      console.log(event.dataItem.expanded);
+      let newData = data.map((item) => {
+        if (item.globalEmployeeId === event.dataItem.globalEmployeeId) {
+          var newItem = {...item};
+          newItem.expanded = !event.dataItem.expanded;
+          return newItem;
+        }
+        else
+        {
+          return item;
+        }
+        
+      });
+      setData(newData);
+    };
+
   return (
     <Root header={<SuccessFactorsHeader />} content={
       <>
@@ -48,17 +122,20 @@ function SuccessFactors(props) {
                               style={{
                                   height: "650px",
                               }}
-                              data={successFactors?.slice(page.skip, page.take + page.skip)}
+                              data={data?.slice(page.skip, page.take + page.skip)}
                               sortable={true}
                               skip={page.skip}
                               take={page.take}
-                              total={successFactors?.length}
+                              total={data?.length}
                               pageable={true}
                               pageSize={8}
                               onPageChange={pageChange}
+                              detail={DetailComponent}
+                              expandField="expanded"
+                              onExpandChange={expandChange}
                               >
-                              <Column title='ID' width={80} field="id" locked="true" />
-                              <Column title='Global Employee ID' width={150} field="globalEmployeeId" locked="true"  />
+                              <Column title='ID' width={80} field="id" />
+                              <Column title='Global Employee ID' width={150} field="globalEmployeeId" />
                               <Column title='First Name' width={150} field="firstName" />
                               <Column title='Middle Name' width={150} field="middleName" />
                               <Column title='Last Name' width={150} field="lastName" />
@@ -106,7 +183,7 @@ function SuccessFactors(props) {
                               <Column title='Standard Hours' width={150} field="standardHours" />
                               <Column title='Suffix' width={150} field="suffix" />   
                               <Column title='Textfield' width={150} field="textfield" />
-                              <Column title='Waers' width={150} field="waers" />                           
+                              <Column title='Waers' width={150} field="waers" />           
                           </Grid>
                       </>
                       }

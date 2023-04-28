@@ -22,6 +22,7 @@ import exchangeRateReducer from 'src/app/main/apps/reference/exchange-rates/stor
 import exchangeRatesReducer from 'src/app/main/apps/reference/exchange-rates/store/exchangeRatesSlice';
 import glcReducer from 'src/app/main/apps/reference/glc/store/glcSlice';
 import glcsReducer from 'src/app/main/apps/reference/glc/store/glcsSlice';
+import successFactorsErrorsSlice from 'src/app/main/apps/base/success-factors/store/errorSlice';
 
 
 const createReducer = (asyncReducers) => (state, action) => {
@@ -36,6 +37,7 @@ const createReducer = (asyncReducers) => (state, action) => {
     interfaceExecutionDetails: interfaceExecutionDetailsReducer,
     interfaceExecutionDetailErrors: interfaceExecutionDetailErrorsReducer,
     successFactors: successFactorsReducer,
+    successFactorsErrors: successFactorsErrorsSlice,
     employeeStagings: employeeStagingsReducer,
     employeeStagingHistorics: employeeStagingHistoricsReducer,
     employeeStagingHistoricErrors: employeeStagingHistoricErrorsSlice,
